@@ -1,13 +1,21 @@
 {
-  "name": "acs-bluetooth",
+  "name": "ns-acs-bluetooth",
   "version": "1.0.0",
-  "description": "Bluetooth module for connecting to ACS scaner",
+  "keywords": "Android, NativeScript, Bluetooth, ACS, ACR1255U-J1"
+  "description": "Bluetooth module for connecting to ACS scanner with NativeScript",
+  "homepage": "https://github.com/luciditysoftware/ACSBluetooth",
+  "repository": { 
+    "type" : "git",
+    "url" : "https://github.com/luciditysoftware/ACSBluetooth.git"
+  }, 
   "main": "main.js",
+  "bugs": {"url": "https://github.com/luciditysoftware/ACSBluetooth/issues"},  
   "nativescript": {
     "platforms": {
       "android": "2.5.0"
     }
   },
+  "license" : "MIT", 
   "dependencies": {
     "@angular/core": "2.4.3",
     "tns-core-modules": "2.5.1"
