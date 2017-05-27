@@ -1,5 +1,4 @@
 import utils = require("utils/utils");
-import app = require("application");
 import {Injectable} from "@angular/core";
 import {BluetoothGattErrors} from "./lib/bluetooth-gatt-errors";
 import {BehaviorSubject, Observable} from "rxjs";
