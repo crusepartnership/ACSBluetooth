@@ -1,4 +1,14 @@
-# Created by .ignore support plugin (hsz.mobi)
-/node_modules/
-/.idea/
-/npm-debug.log
+*.js
+*.js.map
+*.log
+!scripts/*.js
+demo/app/*.js
+!demo/karma.conf.js
+!demo/app/tests/*.js
+demo/*.d.ts
+!demo/references.d.ts
+demo/lib
+demo/platforms
+demo/node_modules
+node_modules
+.idea/
