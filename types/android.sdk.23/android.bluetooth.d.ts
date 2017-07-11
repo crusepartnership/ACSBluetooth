@@ -1,8 +1,5 @@
+// java sdk 23
 
-
-
-/// <reference path="./android.bluetooth.BluetoothDevice.d.ts" />
-/// <reference path="./java.util.List.d.ts" />
 declare module android {
     export module bluetooth {
         export class BluetoothA2dp extends javalangObject implements android.bluetooth.BluetoothProfile {
@@ -11,9 +8,9 @@ declare module android {
             public static STATE_NOT_PLAYING: number;
             public static STATE_PLAYING: number;
 
-            public getConnectedDevices(): javautilList;
+            public getConnectedDevices(): any;
 
-            public getDevicesMatchingConnectionStates(param0: native.Array<number>): javautilList;
+            public getDevicesMatchingConnectionStates(param0: native.Array<number>): any;
 
             public isA2dpPlaying(param0: android.bluetooth.BluetoothDevice): boolean;
 
@@ -376,12 +373,12 @@ declare module android {
     }
 }
 
-/// <reference path="./android.os.Parcel.d.ts" />
+/// <reference path="./any.d.ts" />
 /// <reference path="./java.lang.Object.d.ts" />
 declare module android {
     export module bluetooth {
-        export class BluetoothClass extends javalangObject implements android.os.Parcelable {
-            public static CREATOR: android.os.Parcelable.Creator;
+        export class BluetoothClass extends javalangObject  {
+            public static CREATOR: any;
 
             public toString(): string;
 
@@ -393,7 +390,7 @@ declare module android {
 
             public getDeviceClass(): number;
 
-            public writeToParcel(param0: android.os.Parcel, param1: number): void;
+            public writeToParcel(param0: any, param1: number): void;
 
             public getMajorDeviceClass(): number;
 
@@ -493,13 +490,13 @@ declare module android {
 /// <reference path="./android.bluetooth.BluetoothGattCallback.d.ts" />
 /// <reference path="./android.bluetooth.BluetoothSocket.d.ts" />
 /// <reference path="./android.content.Context.d.ts" />
-/// <reference path="./android.os.Parcel.d.ts" />
-/// <reference path="./android.os.ParcelUuid.d.ts" />
+/// <reference path="./any.d.ts" />
+/// <reference path="./any.d.ts" />
 /// <reference path="./java.lang.Object.d.ts" />
 /// <reference path="./java.util.UUID.d.ts" />
 declare module android {
     export module bluetooth {
-        export class BluetoothDevice extends javalangObject implements android.os.Parcelable {
+        export class BluetoothDevice extends javalangObject {
             public static ACTION_ACL_CONNECTED: string;
             public static ACTION_ACL_DISCONNECTED: string;
             public static ACTION_ACL_DISCONNECT_REQUESTED: string;
@@ -512,7 +509,7 @@ declare module android {
             public static BOND_BONDED: number;
             public static BOND_BONDING: number;
             public static BOND_NONE: number;
-            public static CREATOR: android.os.Parcelable.Creator;
+            public static CREATOR: any;
             public static DEVICE_TYPE_CLASSIC: number;
             public static DEVICE_TYPE_DUAL: number;
             public static DEVICE_TYPE_LE: number;
@@ -553,7 +550,7 @@ declare module android {
 
             public getBondState(): number;
 
-            public getUuids(): native.Array<android.os.ParcelUuid>;
+            public getUuids(): native.Array<any>;
 
             public toString(): string;
 
@@ -561,7 +558,7 @@ declare module android {
 
             public describeContents(): number;
 
-            public writeToParcel(param0: android.os.Parcel, param1: number): void;
+            public writeToParcel(param0: any, param1: number): void;
 
             public createBond(): boolean;
 
@@ -633,17 +630,17 @@ declare module android {
             static STATE_DISCONNECTED: number;
             static STATE_DISCONNECTING: number;
 
-            public getConnectedDevices(): javautilList;
+            public getConnectedDevices(): any;
 
             public connect(): boolean;
 
-            public getDevicesMatchingConnectionStates(param0: native.Array<number>): javautilList;
+            public getDevicesMatchingConnectionStates(param0: native.Array<number>): any;
 
             public executeReliableWrite(): boolean;
 
             public setCharacteristicNotification(param0: android.bluetooth.BluetoothGattCharacteristic, param1: boolean): boolean;
 
-            public getServices(): javautilList;
+            public getServices(): any;
 
             public readRemoteRssi(): boolean;
 
@@ -747,11 +744,11 @@ declare module android {
             public static WRITE_TYPE_DEFAULT: number;
             public static WRITE_TYPE_NO_RESPONSE: number;
             public static WRITE_TYPE_SIGNED: number;
-            public mDescriptors: javautilList;
+            public mDescriptors: any;
 
             public setValue(param0: string): boolean;
 
-            public getIntValue(param0: number, param1: number): javalangInteger;
+            public getIntValue(param0: number, param1: number): any;
 
             public getStringValue(param0: number): string;
 
@@ -765,7 +762,7 @@ declare module android {
 
             public constructor(param0: javautilUUID, param1: number, param2: number);
 
-            public getDescriptors(): javautilList;
+            public getDescriptors(): any;
 
             public getService(): android.bluetooth.BluetoothGattService;
 
@@ -773,7 +770,7 @@ declare module android {
 
             public getPermissions(): number;
 
-            public getFloatValue(param0: number, param1: number): javalangFloat;
+            public getFloatValue(param0: number, param1: number): any;
 
             public getInstanceId(): number;
 
@@ -829,9 +826,9 @@ declare module android {
 declare module android {
     export module bluetooth {
         export class BluetoothGattServer extends javalangObject implements android.bluetooth.BluetoothProfile {
-            public getConnectedDevices(): javautilList;
+            public getConnectedDevices(): any;
 
-            public getDevicesMatchingConnectionStates(param0: native.Array<number>): javautilList;
+            public getDevicesMatchingConnectionStates(param0: native.Array<number>): any;
 
             public cancelConnection(param0: android.bluetooth.BluetoothDevice): void;
 
@@ -839,7 +836,7 @@ declare module android {
 
             public clearServices(): void;
 
-            public getServices(): javautilList;
+            public getServices(): any;
 
             public sendResponse(param0: android.bluetooth.BluetoothDevice, param1: number, param2: number, param3: number, param4: native.Array<number>): boolean;
 
@@ -896,14 +893,14 @@ declare module android {
         export class BluetoothGattService extends javalangObject {
             public static SERVICE_TYPE_PRIMARY: number;
             public static SERVICE_TYPE_SECONDARY: number;
-            public mCharacteristics: javautilList;
-            public mIncludedServices: javautilList;
+            public mCharacteristics: any;
+            public mIncludedServices: any;
 
             public constructor(param0: javautilUUID, param1: number);
 
             public getType(): number;
 
-            public getIncludedServices(): javautilList;
+            public getIncludedServices(): any;
 
             public addService(param0: android.bluetooth.BluetoothGattService): boolean;
 
@@ -911,7 +908,7 @@ declare module android {
 
             public getCharacteristic(param0: javautilUUID): android.bluetooth.BluetoothGattCharacteristic;
 
-            public getCharacteristics(): javautilList;
+            public getCharacteristics(): any;
 
             public addCharacteristic(param0: android.bluetooth.BluetoothGattCharacteristic): boolean;
 
@@ -943,9 +940,9 @@ declare module android {
             public static VENDOR_RESULT_CODE_COMMAND_ANDROID: string;
             public static VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY: string;
 
-            public getConnectedDevices(): javautilList;
+            public getConnectedDevices(): any;
 
-            public getDevicesMatchingConnectionStates(param0: native.Array<number>): javautilList;
+            public getDevicesMatchingConnectionStates(param0: native.Array<number>): any;
 
             public isAudioConnected(param0: android.bluetooth.BluetoothDevice): boolean;
 
@@ -963,7 +960,7 @@ declare module android {
 /// <reference path="./android.bluetooth.BluetoothDevice.d.ts" />
 /// <reference path="./android.bluetooth.BluetoothHealthAppConfiguration.d.ts" />
 /// <reference path="./android.bluetooth.BluetoothHealthCallback.d.ts" />
-/// <reference path="./android.os.ParcelFileDescriptor.d.ts" />
+/// <reference path="./any.d.ts" />
 /// <reference path="./java.lang.String.d.ts" />
 /// <reference path="./java.util.List.d.ts" />
 declare module android {
@@ -984,15 +981,15 @@ declare module android {
 
             public connectChannelToSource(param0: android.bluetooth.BluetoothDevice, param1: android.bluetooth.BluetoothHealthAppConfiguration): boolean;
 
-            public getConnectedDevices(): javautilList;
+            public getConnectedDevices(): any;
 
             public unregisterAppConfiguration(param0: android.bluetooth.BluetoothHealthAppConfiguration): boolean;
 
-            public getDevicesMatchingConnectionStates(param0: native.Array<number>): javautilList;
+            public getDevicesMatchingConnectionStates(param0: native.Array<number>): any;
 
             public getConnectionState(param0: android.bluetooth.BluetoothDevice): number;
 
-            public getMainChannelFd(param0: android.bluetooth.BluetoothDevice, param1: android.bluetooth.BluetoothHealthAppConfiguration): android.os.ParcelFileDescriptor;
+            public getMainChannelFd(param0: android.bluetooth.BluetoothDevice, param1: android.bluetooth.BluetoothHealthAppConfiguration): any;
 
             public disconnectChannel(param0: android.bluetooth.BluetoothDevice, param1: android.bluetooth.BluetoothHealthAppConfiguration, param2: number): boolean;
 
@@ -1001,12 +998,12 @@ declare module android {
     }
 }
 
-/// <reference path="./android.os.Parcel.d.ts" />
+/// <reference path="./any.d.ts" />
 /// <reference path="./java.lang.Object.d.ts" />
 declare module android {
     export module bluetooth {
-        export class BluetoothHealthAppConfiguration extends javalangObject implements android.os.Parcelable {
-            public static CREATOR: android.os.Parcelable.Creator;
+        export class BluetoothHealthAppConfiguration extends javalangObject {
+            public static CREATOR: any;
 
             public toString(): string;
 
@@ -1020,7 +1017,7 @@ declare module android {
 
             public describeContents(): number;
 
-            public writeToParcel(param0: android.os.Parcel, param1: number): void;
+            public writeToParcel(param0: any, param1: number): void;
 
             public hashCode(): number;
         }
@@ -1029,11 +1026,11 @@ declare module android {
 
 /// <reference path="./android.bluetooth.BluetoothDevice.d.ts" />
 /// <reference path="./android.bluetooth.BluetoothHealthAppConfiguration.d.ts" />
-/// <reference path="./android.os.ParcelFileDescriptor.d.ts" />
+/// <reference path="./any.d.ts" />
 declare module android {
     export module bluetooth {
         export abstract class BluetoothHealthCallback extends javalangObject {
-            public onHealthChannelStateChange(param0: android.bluetooth.BluetoothHealthAppConfiguration, param1: android.bluetooth.BluetoothDevice, param2: number, param3: number, param4: android.os.ParcelFileDescriptor, param5: number): void;
+            public onHealthChannelStateChange(param0: android.bluetooth.BluetoothHealthAppConfiguration, param1: android.bluetooth.BluetoothDevice, param2: number, param3: number, param4: any, param5: number): void;
 
             public constructor();
 
@@ -1051,9 +1048,9 @@ declare module android {
 declare module android {
     export module bluetooth {
         export class BluetoothManager extends javalangObject {
-            public getConnectedDevices(param0: number): javautilList;
+            public getConnectedDevices(param0: number): any;
 
-            public getDevicesMatchingConnectionStates(param0: number, param1: native.Array<number>): javautilList;
+            public getDevicesMatchingConnectionStates(param0: number, param1: native.Array<number>): any;
 
             public getAdapter(): android.bluetooth.BluetoothAdapter;
 
@@ -1074,8 +1071,8 @@ declare module android {
              * Constructs a new instance of the android.bluetooth.BluetoothProfile interface with the provided implementation.
              */
             public constructor(implementation: {
-                getConnectedDevices(): javautilList;
-                getDevicesMatchingConnectionStates(param0: native.Array<number>): javautilList;
+                getConnectedDevices(): any;
+                getDevicesMatchingConnectionStates(param0: native.Array<number>): any;
                 getConnectionState(param0: android.bluetooth.BluetoothDevice): number;
             });
 
@@ -1092,9 +1089,9 @@ declare module android {
             public static EXTRA_PREVIOUS_STATE: string;
             public static GATT_SERVER: number;
 
-            public getConnectedDevices(): javautilList;
+            public getConnectedDevices(): any;
 
-            public getDevicesMatchingConnectionStates(param0: native.Array<number>): javautilList;
+            public getDevicesMatchingConnectionStates(param0: native.Array<number>): any;
 
             public getConnectionState(param0: android.bluetooth.BluetoothDevice): number;
         }
@@ -1116,11 +1113,11 @@ declare module android {
     }
 }
 
-import javaioCloseable = java.io.Closeable;
+
 /// <reference path="./android.bluetooth.BluetoothSocket.d.ts" />
 declare module android {
     export module bluetooth {
-        export class BluetoothServerSocket extends javalangObject implements javaioCloseable {
+        export class BluetoothServerSocket extends javalangObject  {
             public toString(): string;
 
             public accept(): android.bluetooth.BluetoothSocket;
@@ -1132,13 +1129,12 @@ declare module android {
     }
 }
 
-import javaioOutputStream = java.io.OutputStream;
 /// <reference path="./android.bluetooth.BluetoothDevice.d.ts" />
 /// <reference path="./java.io.InputStream.d.ts" />
 /// <reference path="./java.io.OutputStream.d.ts" />
 declare module android {
     export module bluetooth {
-        export class BluetoothSocket extends javalangObject implements javaioCloseable {
+        export class BluetoothSocket extends javalangObject {
             public static TYPE_L2CAP: number;
             public static TYPE_RFCOMM: number;
             public static TYPE_SCO: number;
@@ -1147,13 +1143,13 @@ declare module android {
 
             public isConnected(): boolean;
 
-            public getOutputStream(): javaioOutputStream;
+            public getOutputStream(): any;
 
             public connect(): void;
 
             public close(): void;
 
-            public getInputStream(): javaioInputStream;
+            public getInputStream(): any;
 
             public getConnectionType(): number;
 
@@ -1186,20 +1182,20 @@ declare module android {
 }
 
 /// <reference path="./android.bluetooth.le.AdvertiseData.d.ts" />
-/// <reference path="./android.os.Parcel.d.ts" />
-/// <reference path="./android.os.ParcelUuid.d.ts" />
-/// <reference path="./android.util.SparseArray.d.ts" />
+/// <reference path="./any.d.ts" />
+/// <reference path="./any.d.ts" />
+/// <reference path="./any.d.ts" />
 /// <reference path="./java.util.List.d.ts" />
 /// <reference path="./java.util.Map.d.ts" />
 declare module android {
     export module bluetooth {
         export module le {
-            export class AdvertiseData extends javalangObject implements android.os.Parcelable {
-                public static CREATOR: android.os.Parcelable.Creator;
+            export class AdvertiseData extends javalangObject {
+                public static CREATOR: any;
 
-                public writeToParcel(param0: android.os.Parcel, param1: number): void;
+                public writeToParcel(param0: any, param1: number): void;
 
-                public getServiceData(): javautilMap;
+                public getServiceData(): any;
 
                 public describeContents(): number;
 
@@ -1209,9 +1205,9 @@ declare module android {
 
                 public toString(): string;
 
-                public getServiceUuids(): javautilList;
+                public getServiceUuids(): any;
 
-                public getManufacturerSpecificData(): android.util.SparseArray;
+                public getManufacturerSpecificData(): any;
             }
             export module AdvertiseData {
                 export class Builder extends javalangObject {
@@ -1219,9 +1215,9 @@ declare module android {
 
                     public setIncludeDeviceName(param0: boolean): android.bluetooth.le.AdvertiseData.Builder;
 
-                    public addServiceData(param0: android.os.ParcelUuid, param1: native.Array<number>): android.bluetooth.le.AdvertiseData.Builder;
+                    public addServiceData(param0: any, param1: native.Array<number>): android.bluetooth.le.AdvertiseData.Builder;
 
-                    public addServiceUuid(param0: android.os.ParcelUuid): android.bluetooth.le.AdvertiseData.Builder;
+                    public addServiceUuid(param0: any): android.bluetooth.le.AdvertiseData.Builder;
 
                     public addManufacturerData(param0: number, param1: native.Array<number>): android.bluetooth.le.AdvertiseData.Builder;
 
@@ -1235,11 +1231,11 @@ declare module android {
 }
 
 /// <reference path="./android.bluetooth.le.AdvertiseSettings.d.ts" />
-/// <reference path="./android.os.Parcel.d.ts" />
+/// <reference path="./any.d.ts" />
 declare module android {
     export module bluetooth {
         export module le {
-            export class AdvertiseSettings extends javalangObject implements android.os.Parcelable {
+            export class AdvertiseSettings extends javalangObject {
                 public static ADVERTISE_MODE_BALANCED: number;
                 public static ADVERTISE_MODE_LOW_LATENCY: number;
                 public static ADVERTISE_MODE_LOW_POWER: number;
@@ -1247,7 +1243,7 @@ declare module android {
                 public static ADVERTISE_TX_POWER_LOW: number;
                 public static ADVERTISE_TX_POWER_MEDIUM: number;
                 public static ADVERTISE_TX_POWER_ULTRA_LOW: number;
-                public static CREATOR: android.os.Parcelable.Creator;
+                public static CREATOR: any;
 
                 public getMode(): number;
 
@@ -1255,7 +1251,7 @@ declare module android {
 
                 public isConnectable(): boolean;
 
-                public writeToParcel(param0: android.os.Parcel, param1: number): void;
+                public writeToParcel(param0: any, param1: number): void;
 
                 public describeContents(): number;
 
@@ -1305,7 +1301,7 @@ declare module android {
     export module bluetooth {
         export module le {
             export class BluetoothLeScanner extends javalangObject {
-                public startScan(param0: javautilList, param1: android.bluetooth.le.ScanSettings, param2: android.bluetooth.le.ScanCallback): void;
+                public startScan(param0: any, param1: android.bluetooth.le.ScanSettings, param2: android.bluetooth.le.ScanCallback): void;
 
                 public stopScan(param0: android.bluetooth.le.ScanCallback): void;
 
@@ -1328,7 +1324,7 @@ declare module android {
                 public static SCAN_FAILED_FEATURE_UNSUPPORTED: number;
                 public static SCAN_FAILED_INTERNAL_ERROR: number;
 
-                public onBatchScanResults(param0: javautilList): void;
+                public onBatchScanResults(param0: any): void;
 
                 public onScanFailed(param0: number): void;
 
@@ -1342,21 +1338,21 @@ declare module android {
 
 /// <reference path="./android.bluetooth.le.ScanFilter.d.ts" />
 /// <reference path="./android.bluetooth.le.ScanResult.d.ts" />
-/// <reference path="./android.os.Parcel.d.ts" />
-/// <reference path="./android.os.ParcelUuid.d.ts" />
+/// <reference path="./any.d.ts" />
+/// <reference path="./any.d.ts" />
 /// <reference path="./java.lang.Object.d.ts" />
 /// <reference path="./java.lang.String.d.ts" />
 declare module android {
     export module bluetooth {
         export module le {
-            export class ScanFilter extends javalangObject implements android.os.Parcelable {
-                public static CREATOR: android.os.Parcelable.Creator;
+            export class ScanFilter extends javalangObject {
+                public static CREATOR: any;
 
-                public getServiceDataUuid(): android.os.ParcelUuid;
+                public getServiceDataUuid(): any;
 
                 public getDeviceName(): string;
 
-                public writeToParcel(param0: android.os.Parcel, param1: number): void;
+                public writeToParcel(param0: any, param1: number): void;
 
                 public getServiceDataMask(): native.Array<number>;
 
@@ -1368,7 +1364,7 @@ declare module android {
 
                 public getServiceData(): native.Array<number>;
 
-                public getServiceUuid(): android.os.ParcelUuid;
+                public getServiceUuid(): any;
 
                 public toString(): string;
 
@@ -1382,7 +1378,7 @@ declare module android {
 
                 public describeContents(): number;
 
-                public getServiceUuidMask(): android.os.ParcelUuid;
+                public getServiceUuidMask(): any;
             }
             export module ScanFilter {
                 export class Builder extends javalangObject {
@@ -1394,14 +1390,14 @@ declare module android {
 
                     public setDeviceAddress(param0: string): android.bluetooth.le.ScanFilter.Builder;
 
-                    public setServiceUuid(param0: android.os.ParcelUuid): android.bluetooth.le.ScanFilter.Builder;
+                    public setServiceUuid(param0: any): android.bluetooth.le.ScanFilter.Builder;
 
                     public setManufacturerData(param0: number, param1: native.Array<number>): android.bluetooth.le.ScanFilter.Builder;
 
-                    public setServiceData(param0: android.os.ParcelUuid, param1: native.Array<number>): android.bluetooth.le.ScanFilter.Builder;
-                    public setServiceData(param0: android.os.ParcelUuid, param1: native.Array<number>, param2: native.Array<number>): android.bluetooth.le.ScanFilter.Builder;
+                    public setServiceData(param0: any, param1: native.Array<number>): android.bluetooth.le.ScanFilter.Builder;
+                    public setServiceData(param0: any, param1: native.Array<number>, param2: native.Array<number>): android.bluetooth.le.ScanFilter.Builder;
 
-                    public setServiceUuid(param0: android.os.ParcelUuid, param1: android.os.ParcelUuid): android.bluetooth.le.ScanFilter.Builder;
+                    public setServiceUuid(param0: any, param1: any): android.bluetooth.le.ScanFilter.Builder;
 
                     public setManufacturerData(param0: number, param1: native.Array<number>, param2: native.Array<number>): android.bluetooth.le.ScanFilter.Builder;
                 }
@@ -1410,8 +1406,8 @@ declare module android {
     }
 }
 
-/// <reference path="./android.os.ParcelUuid.d.ts" />
-/// <reference path="./android.util.SparseArray.d.ts" />
+/// <reference path="./any.d.ts" />
+/// <reference path="./any.d.ts" />
 /// <reference path="./java.util.List.d.ts" />
 /// <reference path="./java.util.Map.d.ts" />
 declare module android {
@@ -1424,16 +1420,16 @@ declare module android {
 
                 public getAdvertiseFlags(): number;
 
-                public getServiceData(): javautilMap;
-                public getServiceData(param0: android.os.ParcelUuid): native.Array<number>;
+                public getServiceData(): any;
+                public getServiceData(param0: any): native.Array<number>;
 
                 public getManufacturerSpecificData(param0: number): native.Array<number>;
 
                 public toString(): string;
 
-                public getServiceUuids(): javautilList;
+                public getServiceUuids(): any;
 
-                public getManufacturerSpecificData(): android.util.SparseArray;
+                public getManufacturerSpecificData(): any;
 
                 public getBytes(): native.Array<number>;
             }
@@ -1443,13 +1439,13 @@ declare module android {
 
 /// <reference path="./android.bluetooth.BluetoothDevice.d.ts" />
 /// <reference path="./android.bluetooth.le.ScanRecord.d.ts" />
-/// <reference path="./android.os.Parcel.d.ts" />
+/// <reference path="./any.d.ts" />
 /// <reference path="./java.lang.Object.d.ts" />
 declare module android {
     export module bluetooth {
         export module le {
-            export class ScanResult extends javalangObject implements android.os.Parcelable {
-                public static CREATOR: android.os.Parcelable.Creator;
+            export class ScanResult extends javalangObject {
+                public static CREATOR: any;
 
                 public getTimestampNanos(): number;
 
@@ -1457,7 +1453,7 @@ declare module android {
 
                 public constructor(param0: android.bluetooth.BluetoothDevice, param1: android.bluetooth.le.ScanRecord, param2: number, param3: number);
 
-                public writeToParcel(param0: android.os.Parcel, param1: number): void;
+                public writeToParcel(param0: any, param1: number): void;
 
                 public getScanRecord(): android.bluetooth.le.ScanRecord;
 
@@ -1476,15 +1472,15 @@ declare module android {
 }
 
 /// <reference path="./android.bluetooth.le.ScanSettings.d.ts" />
-/// <reference path="./android.os.Parcel.d.ts" />
+/// <reference path="./any.d.ts" />
 declare module android {
     export module bluetooth {
         export module le {
-            export class ScanSettings extends javalangObject implements android.os.Parcelable {
+            export class ScanSettings extends javalangObject  {
                 public static CALLBACK_TYPE_ALL_MATCHES: number;
                 public static CALLBACK_TYPE_FIRST_MATCH: number;
                 public static CALLBACK_TYPE_MATCH_LOST: number;
-                public static CREATOR: android.os.Parcelable.Creator;
+                public static CREATOR: any;
                 public static MATCH_MODE_AGGRESSIVE: number;
                 public static MATCH_MODE_STICKY: number;
                 public static MATCH_NUM_FEW_ADVERTISEMENT: number;
@@ -1499,7 +1495,7 @@ declare module android {
 
                 public getScanMode(): number;
 
-                public writeToParcel(param0: android.os.Parcel, param1: number): void;
+                public writeToParcel(param0: any, param1: number): void;
 
                 public getScanResultType(): number;
 

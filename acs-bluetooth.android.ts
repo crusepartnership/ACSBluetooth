@@ -135,6 +135,7 @@ export class ACSBluetooth extends Common {
     public createBluetoothReaderGattCallback() {
         this.gattCallback = new this.BluetoothReaderGattCallback();
         this.gattCallback.setOnConnectionStateChangeListener(this.createOnConnectionStateChangeListener());
+        return this.gattCallback();
     }
 
     public getGattCallback(): any {
@@ -177,7 +178,6 @@ export class ACSBluetooth extends Common {
     // remove any existing gatt connection
     public disconnect() {
         if (this.gatt !== null) {
-            console.log(`ASCBluetooth: Disconnecting from device ${this.gatt.device.getAddress()}`);
             this.gatt.disconnect();
             this.gatt.close();
             this.gatt = null;

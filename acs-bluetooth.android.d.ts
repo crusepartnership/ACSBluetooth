@@ -28,7 +28,7 @@ export declare class ACSBluetooth extends Common {
     isScanning(): BehaviorSubject<boolean>;
     scanResultsObservable(): Observable<android.bluetooth.BluetoothDevice[]>;
     private onReaderDetection(detectedReader);
-    createBluetoothReaderGattCallback(): void;
+    createBluetoothReaderGattCallback(): any;
     getGattCallback(): any;
     connect(updatedDeviceDetails: any): boolean;
     disconnect(): void;
