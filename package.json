@@ -19,7 +19,7 @@
     "test.ios.device": "cd demo && tns test ios",
     "test.android": "cd demo && tns test android",
     "preparedemo": "npm run build && cd demo && tns plugin remove acs-bluetooth && tns plugin add .. && tns install",
-    "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns plugin add .. && cd ..",
+    "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns platform add android --sdk 23 && cd ..",
     "postclone": "npm i && node scripts/postclone.js"
   },
   "repository": {

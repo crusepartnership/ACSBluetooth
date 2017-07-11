@@ -10,7 +10,7 @@
         "spec": ">=1.7.1 <2.0.0",
         "type": "range"
       },
-      "/Users/nmuecke/Development/workspace/apps/plugins/acs-bluetooth-plugin/demo/node_modules/@angular/core"
+      "/Users/nmuecke/Development/workspace/apps/plugins/acs-bluetooth/demo/node_modules/@angular/core"
     ]
   ],
   "_from": "tslib@>=1.7.1 <2.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "bc8004164691923a79fe8378bbeb3da2017538ec",
   "_shrinkwrap": null,
   "_spec": "tslib@^1.7.1",
-  "_where": "/Users/nmuecke/Development/workspace/apps/plugins/acs-bluetooth-plugin/demo/node_modules/@angular/core",
+  "_where": "/Users/nmuecke/Development/workspace/apps/plugins/acs-bluetooth/demo/node_modules/@angular/core",
   "author": {
     "name": "Microsoft Corp."
   },

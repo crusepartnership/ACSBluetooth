@@ -10,7 +10,7 @@
         "spec": ">=0.8.4 <0.9.0",
         "type": "range"
       },
-      "/Users/nmuecke/Development/workspace/apps/plugins/acs-bluetooth-plugin/demo"
+      "/Users/nmuecke/Development/workspace/apps/plugins/acs-bluetooth/demo"
     ]
   ],
   "_from": "zone.js@>=0.8.4 <0.9.0",
@@ -44,7 +44,7 @@
   "_shasum": "86ff5053c98aec291a0bf4bbac501d694a05cfbb",
   "_shrinkwrap": null,
   "_spec": "zone.js@^0.8.4",
-  "_where": "/Users/nmuecke/Development/workspace/apps/plugins/acs-bluetooth-plugin/demo",
+  "_where": "/Users/nmuecke/Development/workspace/apps/plugins/acs-bluetooth/demo",
   "author": {
     "name": "Brian Ford"
   },
