@@ -1,21 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfe96809-8819-4b5b-906b-500f31965d58" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/_N_Project.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENCE" afterPath="" />
+    <list default="true" id="debd8899-6dcc-45a6-bf09-ff73950f0ab9" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/acs.bluetooth.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bluetooth-gatt-errors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bluetooth-gatt-errors.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/libs/acsbt-1.0.0preview8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/app.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-hdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-hdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-hdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-ldpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-ldpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-ldpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-mdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-mdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-mdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-nodpi/splash_screen.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xhdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xhdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xxhdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xxhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xxhdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xxxhdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xxxhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/drawable-xxxhdpi/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/values-v21/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/values-v21/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/Android/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-29@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-40@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-50@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-57.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-57@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-60@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-60@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-72@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-76.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-76@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset/icon-83.5@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/Contents.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Contents.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-568h@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-667h@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-736h@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Portrait.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default-Portrait@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchImage.launchimage/Default@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/Contents.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/LaunchScreen-AspectFill.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset/LaunchScreen-AspectFill@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/Contents.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/LaunchScreen.storyboard" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/App_Resources/iOS/build.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/app.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/main-page.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/main-page.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/main-view-model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/app/tests/tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/tsconfig.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/publish/pack.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/publish/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/publish/publish.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/screenshots/demo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seed-tests/jasmine.config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seed-tests/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seed-tests/postclone.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seed-tests/tests.constants.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seed-tests/tests.utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platforms/android/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platforms/android/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platforms/android/include.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platforms/ios/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platforms/ios/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platforms/ios/build.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/references.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scripts/postclone.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tsconfig.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/yourplugin.android.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/yourplugin.android.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/yourplugin.common.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/yourplugin.common.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/yourplugin.ios.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/yourplugin.ios.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tslint.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ACSBluetooth.iml" afterPath="$PROJECT_DIR$/.idea/ACSBluetooth.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +122,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main-page.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/app/main-page.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main-view-model.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/app/main-view-model.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/tsconfig.json" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -37,11 +176,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/src/node_modules" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1582" />
-    <option name="y" value="-436" />
-    <option name="width" value="2206" />
-    <option name="height" value="1304" />
+    <option name="x" value="1954" />
+    <option name="y" value="-120" />
+    <option name="width" value="1440" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -71,6 +213,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACSBluetooth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACSBluetooth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACSBluetooth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACSBluetooth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -79,6 +249,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.ns.project" value="true" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -136,6 +307,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -174,23 +351,29 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136000" />
+    <option name="totallyTimeSpent" value="1057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1582" y="-436" width="2206" height="1304" extended-state="0" />
+    <frame x="1954" y="-120" width="1440" height="803" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24988559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45147678" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31430584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24988559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -200,6 +383,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js.map" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js" />
+        <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.js" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.ios.js" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js.map" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.ios.js.map" />
+        <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.js.map" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -207,5 +402,110 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/demo/app/main-view-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/app/main-page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="191">
+            <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/app/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-123">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/app/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/acs-bluetooth.android.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="50" lean-forward="false" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/app/main-page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/app/main-view-model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

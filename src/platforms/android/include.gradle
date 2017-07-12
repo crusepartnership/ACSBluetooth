@@ -2,8 +2,8 @@
 
 android {
 	productFlavors {
-		"nativescript-yourplugin" {
-			dimension "nativescript-yourplugin"
+		"nativescript-acs-bluetooth" {
+			dimension "nativescript-acs-bluetooth"
 		}
 	}
 }

@@ -1,0 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var application = require("tns-core-modules/application");
+require("reflect-metadata");
+application.start({ moduleName: "main-page" });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYXBwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsMERBQTREO0FBQzVELDRCQUEwQjtBQUMxQixXQUFXLENBQUMsS0FBSyxDQUFDLEVBQUUsVUFBVSxFQUFFLFdBQVcsRUFBRSxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBhcHBsaWNhdGlvbiBmcm9tICd0bnMtY29yZS1tb2R1bGVzL2FwcGxpY2F0aW9uJztcbmltcG9ydCAncmVmbGVjdC1tZXRhZGF0YSc7XG5hcHBsaWNhdGlvbi5zdGFydCh7IG1vZHVsZU5hbWU6IFwibWFpbi1wYWdlXCIgfSk7XG4iXX0=

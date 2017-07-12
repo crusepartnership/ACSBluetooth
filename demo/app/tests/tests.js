@@ -1,12 +1,12 @@
-var YourPlugin = require("nativescript-yourplugin").YourPlugin;
-var yourPlugin = new YourPlugin();
+var ACSBluetooth = require("nativescript-acs-bluetooth").ACSBluetooth;
+var acsBluetooth = new ACSBluetooth();
 
 describe("greet function", function() {
     it("exists", function() {
-        expect(yourPlugin.greet).toBeDefined();
+        expect(acsBluetooth.greet).toBeDefined();
     });
 
     it("returns a string", function() {
-        expect(yourPlugin.greet()).toEqual("Hello, NS");
+        expect(acsBluetooth.greet()).toEqual("Hello, NS");
     });
 });

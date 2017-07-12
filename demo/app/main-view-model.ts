@@ -1,14 +1,15 @@
 import { Observable } from 'tns-core-modules/data/observable';
-import { YourPlugin } from 'nativescript-yourplugin';
+import { ACSBluetooth } from 'nativescript-acs-bluetooth';
 
 export class HelloWorldModel extends Observable {
   public message: string;
-  private yourPlugin: YourPlugin;
+  private acsBluetooth: ACSBluetooth;
 
   constructor() {
     super();
 
-    this.yourPlugin = new YourPlugin();
-    this.message = this.yourPlugin.message;
+    this.acsBluetooth = new ACSBluetooth();
+    this.message = this.acsBluetooth.message;
+    this.acsBluetooth.startScanningForDevices();
   }
 }
