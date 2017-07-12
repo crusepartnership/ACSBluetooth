@@ -1,6 +1,8 @@
 import { Common } from './acs-bluetooth.common';
 import { BehaviorSubject, Observable } from "rxjs";
 import { NgZone } from "@angular/core";
+import androidBluetooth = android.bluetooth;
+export declare type BluetoothDeviceList = androidBluetooth.BluetoothDevice[];
 export declare class ACSBluetooth extends Common {
     private angularZone;
     private BluetoothGatt;
@@ -26,7 +28,7 @@ export declare class ACSBluetooth extends Common {
     stopScanningForDevices(): void;
     scanningObservable(): Observable<boolean>;
     isScanning(): BehaviorSubject<boolean>;
-    scanResultsObservable(): Observable<android.bluetooth.BluetoothDevice[]>;
+    scanResultsObservable(): Observable<androidBluetooth.BluetoothDevice[]>;
     private onReaderDetection(detectedReader);
     createBluetoothReaderGattCallback(): any;
     getGattCallback(): any;

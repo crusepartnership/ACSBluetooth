@@ -1,21 +1,23 @@
 import * as utils from "utils/utils";
-import * as app from "application";
 import { Common } from './acs-bluetooth.common';
 import {BluetoothGattErrors} from "./bluetooth-gatt-errors";
 import {BehaviorSubject, Observable} from "rxjs";
 import {NgZone} from "@angular/core";
+import androidBluetooth = android.bluetooth;
+import acsBluetooth = com.acs.bluetooth;
+export type BluetoothDeviceList = androidBluetooth.BluetoothDevice[];
 
 export class ACSBluetooth extends Common {
 
     // Android java to js
-    private BluetoothGatt = android.bluetooth.BluetoothGatt;
-    private BluetoothProfile = android.bluetooth.BluetoothProfile;
+    private BluetoothGatt = androidBluetooth.BluetoothGatt;
+    private BluetoothProfile = androidBluetooth.BluetoothProfile;
     // ASC jar to js
-    private BluetoothReader = com.acs.bluetooth.BluetoothReader;
-    private BluetoothReaderGattCallback = com.acs.bluetooth.BluetoothReaderGattCallback;
-    private BluetoothReaderManager = com.acs.bluetooth.BluetoothReaderManager;
-    private OnReaderDetectionListener = com.acs.bluetooth.BluetoothReaderManager.OnReaderDetectionListener;
-    private OnConnectionStateChangeListener = com.acs.bluetooth.BluetoothReaderGattCallback.OnConnectionStateChangeListener;
+    private BluetoothReader = acsBluetooth.BluetoothReader;
+    private BluetoothReaderGattCallback = acsBluetooth.BluetoothReaderGattCallback;
+    private BluetoothReaderManager = acsBluetooth.BluetoothReaderManager;
+    private OnReaderDetectionListener = acsBluetooth.BluetoothReaderManager.OnReaderDetectionListener;
+    private OnConnectionStateChangeListener = acsBluetooth.BluetoothReaderGattCallback.OnConnectionStateChangeListener;
 
     private readerState = this.BluetoothReader.STATE_DISCONNECTED;
     private bluetoothErrors = new BluetoothGattErrors();
@@ -24,21 +26,21 @@ export class ACSBluetooth extends Common {
     private gattCallback: any = null;
 
     private reader: any = null;
-    private device: android.bluetooth.BluetoothDevice = null;
-    private gatt: android.bluetooth.BluetoothGatt  = null;
+    private device: androidBluetooth.BluetoothDevice = null;
+    private gatt: androidBluetooth.BluetoothGatt  = null;
     private adapter: any = null;
     private scanning: BehaviorSubject<boolean>;
-    private scanResults: BehaviorSubject<android.bluetooth.BluetoothDevice[]>;
+    private scanResults: BehaviorSubject<androidBluetooth.BluetoothDevice[]>;
 
     /**
      * Callback for scanning for new devices
      */
-    private scanForDevicesCallback = new android.bluetooth.BluetoothAdapter.LeScanCallback({
-        onLeScan: (device: android.bluetooth.BluetoothDevice , rssi, data) => {
+    private scanForDevicesCallback = new androidBluetooth.BluetoothAdapter.LeScanCallback({
+        onLeScan: (device: androidBluetooth.BluetoothDevice , rssi, data) => {
             try {
                 console.log(`ASCBluetooth: scanResults ${this}`);
                 let value = this.scanResults.getValue();
-                let filteredValues = value.filter((item: android.bluetooth.BluetoothDevice ) => {
+                let filteredValues = value.filter((item: androidBluetooth.BluetoothDevice ) => {
                         return item.getAddress() === device.getAddress();
                     });
                 if (filteredValues.length > 1) {
@@ -63,7 +65,7 @@ export class ACSBluetooth extends Common {
     constructor(private angularZone: NgZone) {
         super();
         console.log("ASCBluetooth: init");
-        this.scanResults = <BehaviorSubject<android.bluetooth.BluetoothDevice[]>> new BehaviorSubject([]);
+        this.scanResults = <BehaviorSubject<androidBluetooth.BluetoothDevice[]>> new BehaviorSubject([]);
         this.scanning = <BehaviorSubject<boolean>> new BehaviorSubject(false);
 
         //let manager = utils.ad.getApplicationContext().getSystemService(android.content.Context.BLUETOOTH_SERVICE);
@@ -108,7 +110,7 @@ export class ACSBluetooth extends Common {
         return this.scanning;
     }
 
-    public scanResultsObservable(): Observable<android.bluetooth.BluetoothDevice[]> {
+    public scanResultsObservable(): Observable<androidBluetooth.BluetoothDevice[]> {
         return this.scanResults.asObservable();
     }
 

@@ -1,0 +1,33 @@
+<ActionBar>
+    <StackLayout orientation="horizontal"
+                 ios:horizontalAlignment="center"
+                 android:horizontalAlignment="left">
+        <Label [text]="'Tap On/Off'"></Label>
+    </StackLayout>
+</ActionBar>
+<DockLayout class="dashboard">
+    <StackLayout dock="top" orientation="vertical">
+        <Button id="toggleScan"
+                (tap)="toggleScan()"
+                class="button"
+                text="{{ !isScanning ? 'Start' : 'Stop'}} Scanning"
+                style="padding: 15;"></Button>
+        <Button id="connectionTest"
+                (tap)="selectDevice()"
+                class="button"
+                text="test connection"
+                style="padding: 15;"></Button>
+        <Label text="Found {{scanResults.length}} Bluetooth devices" class="heading"></Label>
+    </StackLayout>
+    <ScrollView orientation="vertical">
+        <ListView [items]="scanResults" (itemTap)="selectDevice($event)">
+            <ng-template let-device="item" let-i="index">
+                <StackLayout orientation="vertical" class="item-container">
+                    <Label [text]='device.getAddress()' class="item-heading"></Label>
+                    <Label [text]='device.getName()' class="item-text"></Label>
+                    <Label [text]='device.hashCode()' class="item-text"></Label>
+                </StackLayout>
+            </ng-template>
+        </ListView>
+    </ScrollView>
+</DockLayout>

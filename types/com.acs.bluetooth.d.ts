@@ -1,9 +1,11 @@
+
 declare module com {
     export module acs {
         export module bluetooth {
             export class Acr1255uj1Reader extends com.acs.bluetooth.BluetoothReader {
                 public enableNotification(param0: boolean): boolean;
 
+                public getCardStatus(): boolean;
                 public getCardStatus(): boolean;
 
                 public powerOffCard(): boolean;

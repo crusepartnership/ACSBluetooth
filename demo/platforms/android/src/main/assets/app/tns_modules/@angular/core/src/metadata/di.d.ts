@@ -175,11 +175,11 @@ export interface ContentChildrenDecorator {
      * @stable
      * @Annotation
      */
-    (selector: Type<any> | Function | string, opts?: {
+    (selector: Type<any> | Function | string, {descendants, read}?: {
         descendants?: boolean;
         read?: any;
     }): any;
-    new (selector: Type<any> | Function | string, opts?: {
+    new (selector: Type<any> | Function | string, {descendants, read}?: {
         descendants?: boolean;
         read?: any;
     }): Query;
@@ -234,10 +234,10 @@ export interface ContentChildDecorator {
      * @stable
      * @Annotation
      */
-    (selector: Type<any> | Function | string, opts?: {
+    (selector: Type<any> | Function | string, {read}?: {
         read?: any;
     }): any;
-    new (selector: Type<any> | Function | string, opts?: {
+    new (selector: Type<any> | Function | string, {read}?: {
         read?: any;
     }): ContentChild;
 }
@@ -259,7 +259,7 @@ export declare const ContentChild: ContentChildDecorator;
 /**
  * Type of the ViewChildren decorator / constructor function.
  *
- * See {@link ViewChildren}.
+ * See {@ViewChildren}.
  *
  * @stable
  */
@@ -293,10 +293,10 @@ export interface ViewChildrenDecorator {
      * @stable
      * @Annotation
      */
-    (selector: Type<any> | Function | string, opts?: {
+    (selector: Type<any> | Function | string, {read}?: {
         read?: any;
     }): any;
-    new (selector: Type<any> | Function | string, opts?: {
+    new (selector: Type<any> | Function | string, {read}?: {
         read?: any;
     }): ViewChildren;
 }
@@ -348,10 +348,10 @@ export interface ViewChildDecorator {
      * @stable
      * @Annotation
      */
-    (selector: Type<any> | Function | string, opts?: {
+    (selector: Type<any> | Function | string, {read}?: {
         read?: any;
     }): any;
-    new (selector: Type<any> | Function | string, opts?: {
+    new (selector: Type<any> | Function | string, {read}?: {
         read?: any;
     }): ViewChild;
 }

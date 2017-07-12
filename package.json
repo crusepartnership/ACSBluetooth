@@ -20,11 +20,12 @@
     "test.android": "cd demo && tns test android",
     "preparedemo": "npm run build && cd demo && tns plugin remove acs-bluetooth && tns plugin add .. && tns install",
     "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns platform add android --sdk 23 && cd ..",
-    "postclone": "npm i && node scripts/postclone.js"
+    "postclone": "npm i && node scripts/postclone.js",
+    "clean": "rm -rf node_modules && tns platform remove android && cd demo && rm -rf node_modules && "
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/luciditysoftware/ACSBluetooth.git"
+    "type": "git",
+    "url": "https://github.com/luciditysoftware/ACSBluetooth.git"
   },
   "keywords": [
     "NativeScript",
@@ -46,12 +47,12 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "reflect-metadata": "~0.1.8",
-    "zone.js" : "^0.8.4",
+    "zone.js": "^0.8.4",
     "rxjs": "^5.4.1",
-    "@angular/core":"^4.2.3",
-    "tns-core-modules": "~3.0.0",
+    "@angular/core": "~4.0.0",
+    "tns-core-modules": "~2.5.2",
     "tns-platform-declarations": "^3.0.1",
-    "typescript": "~2.2.1",
+    "typescript": "~2.1.0",
     "prompt": "~1.0.0",
     "rimraf": "~2.5.0"
   }

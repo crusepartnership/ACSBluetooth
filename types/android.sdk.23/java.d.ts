@@ -344,3 +344,4 @@ declare module java {
         }
     }
 }
+
