@@ -9,7 +9,7 @@
         }
     },
     "dependencies": {
-        "@angular/core": "^4.2.3",
+        "@angular/core": "^4.0.0",
         "nativescript-acs-bluetooth": "../src",
         "nativescript-theme-core": "^1.0.4",
         "nativescript-unit-test-runner": "^0.3.4",
@@ -29,6 +29,6 @@
         "karma-nativescript-launcher": "^0.4.0",
         "lazy": "1.0.11",
         "nativescript-dev-typescript": "libs",
-        "typescript": "^2.4.1"
+        "typescript": "^2.3.4"
     }
 }

@@ -5,7 +5,37 @@ import {NgZone} from "@angular/core";
 import * as utils from "tns-core-modules/utils/utils";
 import {Injectable} from "@angular/core";
 import * as app from 'tns-core-modules/application';
+import ScanResult = android.bluetooth.le.ScanResult;
 @Injectable()
+
+
+const MyScanCallback = android.bluetooth.le.ScanCallback.extend({
+    onBatchScanResults: function(results) {
+        console.log("------- scanCallback.onBatchScanResults");
+    },
+    onScanFailed: function(errorCode) {
+        console.log("------- YAY!");
+        console.log("------- scanCallback.onScanFailed errorCode: " + errorCode);
+        var errorMessage;
+        if (errorCode == android.bluetooth.le.ScanCallback.SCAN_FAILED_ALREADY_STARTED) {
+            errorMessage = "Scan already started";
+        } else if (errorCode == android.bluetooth.le.ScanCallback.SCAN_FAILED_APPLICATION_REGISTRATION_FAILED) {
+            errorMessage = "Application registration failed";
+        } else if (errorCode == android.bluetooth.le.ScanCallback.SCAN_FAILED_FEATURE_UNSUPPORTED) {
+            errorMessage = "Feature unsupported";
+        } else if (errorCode == android.bluetooth.le.ScanCallback.SCAN_FAILED_INTERNAL_ERROR) {
+            errorMessage = "Internal error";
+        } else {
+            errorMessage = "Scan failed to start";
+        }
+        console.log("------- scanCallback.onScanFailed errorMessage: " + errorMessage);
+    },
+    onScanResult: function(callbackType, result) {
+        console.log("------- scanCallback.onScanResult: " + callbackType);
+    }
+});
+
+
 export class ACSBluetooth extends Common {
     private BluetoothGatt = android.bluetooth.BluetoothGatt;
     private BluetoothProfile = android.bluetooth.BluetoothProfile;
@@ -28,6 +58,12 @@ export class ACSBluetooth extends Common {
     private adapter: any = null;
     private scanning: BehaviorSubject<boolean>;
     private scanResults: BehaviorSubject<android.bluetooth.BluetoothDevice[]>;
+
+
+
+    private  cback = new MyScanCallback();
+
+
     /**
      * Callback for scanning for new devices
      */
@@ -56,6 +92,9 @@ export class ACSBluetooth extends Common {
         }
     });
 
+
+
+
     /**
      * init module params
      */
@@ -65,9 +104,8 @@ export class ACSBluetooth extends Common {
         this.scanResults = <BehaviorSubject<android.bluetooth.BluetoothDevice[]>> new BehaviorSubject([]);
         this.scanning = <BehaviorSubject<boolean>> new BehaviorSubject(false);
 
-        //let manager = utils.ad.getApplicationContext().getSystemService(android.content.Context.BLUETOOTH_SERVICE);
-        //this.adapter = manager.getAdapter();
-
+        let manager = utils.ad.getApplicationContext().getSystemService(android.content.Context.BLUETOOTH_SERVICE);
+        this.adapter = manager.getAdapter();
         this.readerManager = new this.BluetoothReaderManager();
         this.readerManager.setOnReaderDetectionListener(new this.OnReaderDetectionListener({
             onReaderDetection: this.onReaderDetection
@@ -80,8 +118,37 @@ export class ACSBluetooth extends Common {
         this.scanning.next(true);
         this.scanResults.next([]);
         console.log('Starting scan for Bluetooth devices');
+
         try {
-            this.adapter.startLeScan(this.scanForDevicesCallback);
+
+
+            let scanner = this.adapter.getBluetoothLeScanner();
+
+            let  scanFilters = null;
+            let scanSettings = new android.bluetooth.le.ScanSettings.Builder();
+            scanSettings.setReportDelay(0);
+
+            let scanMode =  android.bluetooth.le.ScanSettings.SCAN_MODE_LOW_LATENCY;
+            scanSettings.setScanMode(scanMode);
+
+            if (android.os.Build.VERSION.SDK_INT >= 23 /*android.os.Build.VERSION_CODES.M */) {
+                let matchMode =  android.bluetooth.le.ScanSettings.MATCH_MODE_AGGRESSIVE;
+                scanSettings.setMatchMode(matchMode);
+
+                let matchNum =  android.bluetooth.le.ScanSettings.MATCH_NUM_MAX_ADVERTISEMENT;
+                scanSettings.setNumOfMatches(matchNum);
+
+                let callbackType =  android.bluetooth.le.ScanSettings.CALLBACK_TYPE_ALL_MATCHES;
+                scanSettings.setCallbackType(callbackType);
+            }
+
+            //console.log(this.cback);
+
+            scanner.startScan(this.cback);
+
+           // let scanResult =   this.adapter.startLeScan(this.scanForDevicesCallback);
+           //  console.log('Scan result: '+ scanResult);
+           //  console.log('result: '+ this.scanResults.getValue());
         } catch (e) {
             console.log(`ASCBluetooth: unable to start scanning for bluetooth devices with message: ${e.message}`);
             this.stopScanningForDevices();

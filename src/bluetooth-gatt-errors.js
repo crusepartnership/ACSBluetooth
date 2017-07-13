@@ -1,5 +1,8 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
+/**
+ * Created by nmuecke on 1/3/17.
+ */
 var BluetoothGattErrors = (function () {
     function BluetoothGattErrors() {
         this.statusCodes = {
@@ -8,7 +11,7 @@ var BluetoothGattErrors = (function () {
             BATTERY_STATUS: {},
             CARD_STATUS: {},
             DEVICE_INFO: {},
-            STATE: {},
+            STATE: {}
         };
         this.statusCodes.BATTERY_STATUS[android.bluetooth.BluetoothGatt.BATTERY_STATUS_FULL] = 'BluetoothReader.BATTERY_STATUS_FULL';
         this.statusCodes.BATTERY_STATUS[android.bluetooth.BluetoothGatt.BATTERY_STATUS_NONE] = 'BluetoothReader.BATTERY_STATUS_NONE';
@@ -60,6 +63,8 @@ var BluetoothGattErrors = (function () {
         this.statusCodes.GATT[com.acs.bluetooth.BluetoothReader.GATT_REQUEST_NOT_SUPPORTED] = 'BluetoothGatt.GATT_REQUEST_NOT_SUPPORTED';
         this.statusCodes.GATT[com.acs.bluetooth.BluetoothReader.GATT_SUCCESS] = 'BluetoothGatt.GATT_SUCCESS';
         this.statusCodes.GATT[com.acs.bluetooth.BluetoothReader.GATT_WRITE_NOT_PERMITTED] = 'BluetoothGatt.GATT_WRITE_NOT_PERMITTED';
+        //Not documented in the this.statusCodes.API
+        //Found here: https://android.googlesource.com/platform/external/bluetooth/bluedroid/+/android-5.1.0_r1/stack/include/gatt_api.h
         this.statusCodes.GATT[0x08] = 'BluetoothGatt.GATT_CONNECTION_TIMEOUT';
         this.statusCodes.GATT[0x13] = 'BluetoothGatt.GATT_CONNECTION_TERMINATE_PEER_USER';
         this.statusCodes.GATT[0x03E] = 'BluetoothGatt.GATT_CONNECTION_FAIL_ESTABLISH';
@@ -174,4 +179,3 @@ var BluetoothGattErrors = (function () {
     return BluetoothGattErrors;
 }());
 exports.BluetoothGattErrors = BluetoothGattErrors;
-//# sourceMappingURL=bluetooth-gatt-errors.js.map
