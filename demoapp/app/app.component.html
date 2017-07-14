@@ -1,0 +1,23 @@
+<ActionBar title="ACSBluettoth Demo"></ActionBar>
+<GridLayout rows="150,*" columns="*">
+    <StackLayout row="0" col="0" orientation="vertical" class="m-10">
+        <StackLayout orientation="horizontal" class="m-t-5 m-b-5">
+            <Button width="100%" text="{{scanBtnText}}" class="btn {{scanBtnStyle}}" (tap)="toggleScan()"></Button>
+        </StackLayout>
+
+        <StackLayout orientation="vertical" class="m-t-5 m-b-5">
+            <Label text="Select a Device" class="h2 font-weight-bold text-center font-black"></Label>
+        </StackLayout>
+    </StackLayout>
+
+    <StackLayout row="1" col="0" orientation="vertical" verticalAlignment="stretch" class="list-container m-10">
+        <ListView class="list-group m-10" [items]="deviceList">
+            <ng-template let-item="item" let-odd="odd" let-even="even">
+                <StackLayout [class.odd]="odd" [class.even]="even">
+                    <Label class="item-label m-10" [text]="item.address" textWrap="true"  (tap)="onItemTap(item)"></Label>
+                </StackLayout>
+            </ng-template>
+        </ListView>
+    </StackLayout>
+
+</GridLayout>
