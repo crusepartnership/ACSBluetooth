@@ -1,19 +1,6 @@
 <component name="libraryTable">
   <library name="tsconfig$roots" type="javaScript">
-    <properties>
-      <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/demoapp/node_modules/tns-core-modules" />
-        <item url="file://$PROJECT_DIR$/demoapp/node_modules" />
-      </sourceFilesUrls>
-    </properties>
-    <CLASSES>
-      <root url="file://$PROJECT_DIR$/demo1/node_modules" />
-      <root url="file://$PROJECT_DIR$/demo1/node_modules/tns-core-modules" />
-      <root url="file://$PROJECT_DIR$/demo1/node_modules" />
-      <root url="file://$PROJECT_DIR$/demo1/node_modules/tns-core-modules" />
-      <root url="file://$PROJECT_DIR$/demoapp/node_modules/tns-core-modules" />
-      <root url="file://$PROJECT_DIR$/demoapp/node_modules" />
-    </CLASSES>
+    <CLASSES />
     <SOURCES />
   </library>
 </component>

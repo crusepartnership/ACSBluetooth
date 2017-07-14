@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var nativescript_acs_bluetooth_1 = require("nativescript-acs-bluetooth");
-//todo consider removeing this service
 var ACSBluetoothService = (function () {
     function ACSBluetoothService(acsBluetooth) {
         this.acsBluetooth = acsBluetooth;
@@ -13,48 +12,30 @@ var ACSBluetoothService = (function () {
         console.log("ACS Bluetooth Service: selectDevice " + JSON.stringify(event));
         this.bluetoothDevice = { address: '20:91:48:5B:62:2E' };
     };
-    /**
-     * Check if bluetooth deivce has been connected
-     * @returns {boolean}
-     */
     ACSBluetoothService.prototype.isConnected = function () {
         return this.connected;
     };
-    /**
-     * Disconnect a bluetooth device
-     */
     ACSBluetoothService.prototype.disconnectBluetoothScanner = function () {
         this.connected = false;
     };
-    /**
-     * Connect to a device
-     * @param address
-     */
     ACSBluetoothService.prototype.connectBluetoothScanner = function (address) {
         this.bluetoothDevice = {
             address: address
         };
-        //this.acsBluetooth.connect(this.bluetoothDevice);
         this.connected = true;
     };
     ACSBluetoothService.prototype.getConnectToDevice = function () {
         return this.bluetoothDevice;
     };
     ACSBluetoothService.prototype.toggleScan = function () {
-        // if (this.acsBluetooth.isScanning().getValue() !== false) {
-        //     this.acsBluetooth.stopScanningForDevices();
-        // } else {
-        //     this.acsBluetooth.startScanningForDevices();
-        // }
     };
     ACSBluetoothService.prototype.startScan = function () {
-        // this.acsBluetooth.startScanningForDevices();
+        this.acsBluetooth.startScanningForDevices();
     };
     ACSBluetoothService.prototype.stopScan = function () {
-        // this.acsBluetooth.stopScanningForDevices();
+        this.acsBluetooth.stopScanningForDevices();
     };
     ACSBluetoothService.prototype.isScanning = function () {
-        // return this.acsBluetooth.isScanning();
     };
     return ACSBluetoothService;
 }());
@@ -63,3 +44,4 @@ ACSBluetoothService = __decorate([
     __metadata("design:paramtypes", [nativescript_acs_bluetooth_1.ACSBluetooth])
 ], ACSBluetoothService);
 exports.ACSBluetoothService = ACSBluetoothService;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWNlLmJsdWV0b290aC5zZXJ2aWNlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYWNlLmJsdWV0b290aC5zZXJ2aWNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsc0NBQXlDO0FBQ3pDLHlFQUF3RDtBQUt4RCxJQUFhLG1CQUFtQjtJQUc1Qiw2QkFDWSxZQUEwQjtRQUExQixpQkFBWSxHQUFaLFlBQVksQ0FBYztRQUg5QixjQUFTLEdBQVksS0FBSyxDQUFDO1FBSy9CLE9BQU8sQ0FBQyxHQUFHLENBQUMsb0NBQW9DLENBQUMsQ0FBQztJQUN0RCxDQUFDO0lBRU0sMENBQVksR0FBbkIsVUFBb0IsS0FBSztRQUNyQixPQUFPLENBQUMsR0FBRyxDQUFDLHlDQUF1QyxJQUFJLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBRyxDQUFDLENBQUM7UUFDeEUsSUFBSSxDQUFDLGVBQWUsR0FBRyxFQUFDLE9BQU8sRUFBRSxtQkFBbUIsRUFBQyxDQUFDO0lBQzlELENBQUM7SUFNTSx5Q0FBVyxHQUFsQjtRQUVJLE1BQU0sQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDO0lBQzFCLENBQUM7SUFLTSx3REFBMEIsR0FBakM7UUFFSSxJQUFJLENBQUMsU0FBUyxHQUFHLEtBQUssQ0FBQztJQUMzQixDQUFDO0lBTU0scURBQXVCLEdBQTlCLFVBQStCLE9BQU87UUFFbEMsSUFBSSxDQUFDLGVBQWUsR0FBRztZQUNuQixPQUFPLEVBQUUsT0FBTztTQUNuQixDQUFDO1FBR0YsSUFBSSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUM7SUFDMUIsQ0FBQztJQUVNLGdEQUFrQixHQUF6QjtRQUNJLE1BQU0sQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDO0lBQ2hDLENBQUM7SUFFTSx3Q0FBVSxHQUFqQjtJQU1BLENBQUM7SUFFTSx1Q0FBUyxHQUFoQjtRQUNJLElBQUksQ0FBQyxZQUFZLENBQUMsdUJBQXVCLEVBQUUsQ0FBQztJQUNoRCxDQUFDO0lBRU0sc0NBQVEsR0FBZjtRQUNJLElBQUksQ0FBQyxZQUFZLENBQUMsc0JBQXNCLEVBQUUsQ0FBQztJQUMvQyxDQUFDO0lBR08sd0NBQVUsR0FBbEI7SUFFQSxDQUFDO0lBS0wsMEJBQUM7QUFBRCxDQUFDLEFBekVELElBeUVDO0FBekVZLG1CQUFtQjtJQUQvQixpQkFBVSxFQUFFO3FDQUtpQix5Q0FBWTtHQUo3QixtQkFBbUIsQ0F5RS9CO0FBekVZLGtEQUFtQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7SW5qZWN0YWJsZX0gZnJvbSBcIkBhbmd1bGFyL2NvcmVcIjtcbmltcG9ydCB7QUNTQmx1ZXRvb3RofSBmcm9tIFwibmF0aXZlc2NyaXB0LWFjcy1ibHVldG9vdGhcIjtcblxuXG4vL3RvZG8gY29uc2lkZXIgcmVtb3ZlaW5nIHRoaXMgc2VydmljZVxuQEluamVjdGFibGUoKVxuZXhwb3J0IGNsYXNzIEFDU0JsdWV0b290aFNlcnZpY2Uge1xuICAgIHByaXZhdGUgY29ubmVjdGVkOiBib29sZWFuID0gZmFsc2U7XG4gICAgcHJpdmF0ZSBibHVldG9vdGhEZXZpY2UgOiBCbHVldG9vdGhEZXZpY2U7XG4gICAgY29uc3RydWN0b3IoXG4gICAgICAgIHByaXZhdGUgYWNzQmx1ZXRvb3RoOiBBQ1NCbHVldG9vdGhcbiAgICApIHtcbiAgICAgICAgY29uc29sZS5sb2coXCJBQ1MgQmx1ZXRvb3RoIFNlcnZpY2U6IHN0YXJ0aW5nIHVwXCIpO1xuICAgIH1cblxuICAgIHB1YmxpYyBzZWxlY3REZXZpY2UoZXZlbnQpIHtcbiAgICAgICAgY29uc29sZS5sb2coYEFDUyBCbHVldG9vdGggU2VydmljZTogc2VsZWN0RGV2aWNlICR7SlNPTi5zdHJpbmdpZnkoZXZlbnQpfWApO1xuICAgICAgICAgICAgdGhpcy5ibHVldG9vdGhEZXZpY2UgPSB7YWRkcmVzczogJzIwOjkxOjQ4OjVCOjYyOjJFJ307XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogQ2hlY2sgaWYgYmx1ZXRvb3RoIGRlaXZjZSBoYXMgYmVlbiBjb25uZWN0ZWRcbiAgICAgKiBAcmV0dXJucyB7Ym9vbGVhbn1cbiAgICAgKi9cbiAgICBwdWJsaWMgaXNDb25uZWN0ZWQoKVxuICAgIHtcbiAgICAgICAgcmV0dXJuIHRoaXMuY29ubmVjdGVkO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIERpc2Nvbm5lY3QgYSBibHVldG9vdGggZGV2aWNlXG4gICAgICovXG4gICAgcHVibGljIGRpc2Nvbm5lY3RCbHVldG9vdGhTY2FubmVyKClcbiAgICB7XG4gICAgICAgIHRoaXMuY29ubmVjdGVkID0gZmFsc2U7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogQ29ubmVjdCB0byBhIGRldmljZVxuICAgICAqIEBwYXJhbSBhZGRyZXNzXG4gICAgICovXG4gICAgcHVibGljIGNvbm5lY3RCbHVldG9vdGhTY2FubmVyKGFkZHJlc3MpXG4gICAge1xuICAgICAgICB0aGlzLmJsdWV0b290aERldmljZSA9IHtcbiAgICAgICAgICAgIGFkZHJlc3M6IGFkZHJlc3NcbiAgICAgICAgfTtcblxuICAgICAgICAvL3RoaXMuYWNzQmx1ZXRvb3RoLmNvbm5lY3QodGhpcy5ibHVldG9vdGhEZXZpY2UpO1xuICAgICAgICB0aGlzLmNvbm5lY3RlZCA9IHRydWU7XG4gICAgfVxuXG4gICAgcHVibGljIGdldENvbm5lY3RUb0RldmljZSgpOiBhbnkge1xuICAgICAgICByZXR1cm4gdGhpcy5ibHVldG9vdGhEZXZpY2U7XG4gICAgfVxuXG4gICAgcHVibGljIHRvZ2dsZVNjYW4oKSB7XG4gICAgICAgIC8vIGlmICh0aGlzLmFjc0JsdWV0b290aC5pc1NjYW5uaW5nKCkuZ2V0VmFsdWUoKSAhPT0gZmFsc2UpIHtcbiAgICAgICAgLy8gICAgIHRoaXMuYWNzQmx1ZXRvb3RoLnN0b3BTY2FubmluZ0ZvckRldmljZXMoKTtcbiAgICAgICAgLy8gfSBlbHNlIHtcbiAgICAgICAgLy8gICAgIHRoaXMuYWNzQmx1ZXRvb3RoLnN0YXJ0U2Nhbm5pbmdGb3JEZXZpY2VzKCk7XG4gICAgICAgIC8vIH1cbiAgICB9XG5cbiAgICBwdWJsaWMgc3RhcnRTY2FuKCkge1xuICAgICAgICB0aGlzLmFjc0JsdWV0b290aC5zdGFydFNjYW5uaW5nRm9yRGV2aWNlcygpO1xuICAgIH1cblxuICAgIHB1YmxpYyBzdG9wU2NhbigpIHtcbiAgICAgICAgdGhpcy5hY3NCbHVldG9vdGguc3RvcFNjYW5uaW5nRm9yRGV2aWNlcygpO1xuICAgIH1cblxuXG4gICAgcHVibGljICBpc1NjYW5uaW5nKCkge1xuICAgICAgIC8vIHJldHVybiB0aGlzLmFjc0JsdWV0b290aC5pc1NjYW5uaW5nKCk7XG4gICAgfVxuXG4gICAgLy8gcHVibGljIGdldCBzY2FuUmVzdWx0cygpOiBPYnNlcnZhYmxlPEJsdWV0b290aERldmljZUxpc3Q+IHtcbiAgICAvLyAgICAgcmV0dXJuIHRoaXMuYWNzQmx1ZXRvb3RoLnNjYW5SZXN1bHRzT2JzZXJ2YWJsZSgpO1xuICAgIC8vIH1cbn0iXX0=

@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   constructor(
       private acsBluetoothService: ACSBluetoothService
   ) {
-
   }
   ngOnInit() {
     this.scanBtnStyle = 'btn-primary';
@@ -43,7 +42,7 @@ export class AppComponent implements OnInit {
     // {
     //   this.acsBluetoothService.stopScan();
     // }
-    // this.acsBluetoothService.startScan();
+     this.acsBluetoothService.startScan();
   }
 
   /**

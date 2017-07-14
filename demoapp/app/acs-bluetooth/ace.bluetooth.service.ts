@@ -62,11 +62,11 @@ export class ACSBluetoothService {
     }
 
     public startScan() {
-       // this.acsBluetooth.startScanningForDevices();
+        this.acsBluetooth.startScanningForDevices();
     }
 
     public stopScan() {
-       // this.acsBluetooth.stopScanningForDevices();
+        this.acsBluetooth.stopScanningForDevices();
     }
 
 
