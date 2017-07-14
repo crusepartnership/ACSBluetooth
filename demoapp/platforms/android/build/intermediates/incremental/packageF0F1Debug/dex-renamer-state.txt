@@ -1,4 +1,0 @@
-#Fri Jul 14 14:06:23 AEST 2017
-base.0=/Users/luke/Lucidity/workspace/ACSBluetooth/demoapp/platforms/android/build/intermediates/transforms/dex/F0F1/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/luke/Lucidity/workspace/ACSBluetooth/demoapp/platforms/android/build/intermediates/transforms/dex/F0F1/debug/folders/1000/1f/main/classes.dex
