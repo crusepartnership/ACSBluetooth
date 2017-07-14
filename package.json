@@ -21,7 +21,7 @@
     "preparedemo": "npm run build && cd demo && tns plugin remove acs-bluetooth && tns plugin add .. && tns install",
     "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns platform add android --sdk 23 && cd ..",
     "postclone": "npm i && node scripts/postclone.js",
-    "clean": "rm -rf node_modules && tns platform remove android && cd demo && rm -rf node_modules && "
+    "clean": "rm -rf node_modules && tns platform remove android && cd demo && rm -rf node_modules && rm -rf platform"
   },
   "repository": {
     "type": "git",

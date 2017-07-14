@@ -7,9 +7,7 @@ import {NgZone} from "@angular/core";
 @Injectable()
 export class ACSBluetoothService {
     private selectedDevice: any;
-    private ACSBluetooth: ACSBluetooth;
-    constructor(private angularZone: NgZone) {
-        this.ACSBluetooth = new ACSBluetooth(angularZone);
+    constructor(private ACSBluetooth: ACSBluetooth) {
         console.log("ACS Bluetooth Service: starting up");
     }
 

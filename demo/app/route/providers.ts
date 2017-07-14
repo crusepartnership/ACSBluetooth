@@ -9,4 +9,5 @@ import {ACSBluetooth} from "acs-bluetooth";
 export const mainProviders: Array<Provider> = [
     RouterExtensions,
     ACSBluetoothService,
+    ACSBluetooth
 ];

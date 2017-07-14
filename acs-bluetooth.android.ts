@@ -2,11 +2,12 @@ import * as utils from "utils/utils";
 import { Common } from './acs-bluetooth.common';
 import {BluetoothGattErrors} from "./bluetooth-gatt-errors";
 import {BehaviorSubject, Observable} from "rxjs";
-import {NgZone} from "@angular/core";
+import {Injectable, NgZone} from "@angular/core";
 import androidBluetooth = android.bluetooth;
 import acsBluetooth = com.acs.bluetooth;
 export type BluetoothDeviceList = androidBluetooth.BluetoothDevice[];
 
+@Injectable()
 export class ACSBluetooth extends Common {
 
     // Android java to js
