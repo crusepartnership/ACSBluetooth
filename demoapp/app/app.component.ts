@@ -3,10 +3,7 @@ import {ACSBluetoothService} from "./acs-bluetooth/ace.bluetooth.service";
 
 @Component({
   selector: "my-app",
-  templateUrl: 'app.component.html',
-  providers: [
-      ACSBluetoothService
-  ]
+  templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
   // Your TypeScript logic goes here
@@ -41,12 +38,12 @@ export class AppComponent implements OnInit {
     this.isScanning = true;
     this.scanBtnText = 'Stop Scanning';
     this.scanBtnStyle = 'btn-warning';
-
-    if(this.acsBluetoothService.isScanning())
-    {
-      this.acsBluetoothService.stopScan();
-    }
-    this.acsBluetoothService.startScan();
+    //
+    // if(this.acsBluetoothService.isScanning())
+    // {
+    //   this.acsBluetoothService.stopScan();
+    // }
+    // this.acsBluetoothService.startScan();
   }
 
   /**
@@ -57,7 +54,7 @@ export class AppComponent implements OnInit {
     this.scanBtnStyle = 'btn-primary';
     this.scanBtnText = 'Start Scanning';
     this.isScanning = false;
-    this.acsBluetoothService.stopScan();
+   // this.acsBluetoothService.stopScan();
   }
 
 }

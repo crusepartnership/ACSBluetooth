@@ -6,8 +6,6 @@ import * as utils from "tns-core-modules/utils/utils";
 import {Injectable} from "@angular/core";
 import * as app from 'tns-core-modules/application';
 import ScanResult = android.bluetooth.le.ScanResult;
-@Injectable()
-
 
 const MyScanCallback = android.bluetooth.le.ScanCallback.extend({
     onBatchScanResults: function(results) {
@@ -35,7 +33,7 @@ const MyScanCallback = android.bluetooth.le.ScanCallback.extend({
     }
 });
 
-
+@Injectable()
 export class ACSBluetooth extends Common {
     private BluetoothGatt = android.bluetooth.BluetoothGatt;
     private BluetoothProfile = android.bluetooth.BluetoothProfile;

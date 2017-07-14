@@ -28,10 +28,12 @@ var AppComponent = (function () {
         this.isScanning = true;
         this.scanBtnText = 'Stop Scanning';
         this.scanBtnStyle = 'btn-warning';
-        if (this.acsBluetoothService.isScanning()) {
-            this.acsBluetoothService.stopScan();
-        }
-        this.acsBluetoothService.startScan();
+        //
+        // if(this.acsBluetoothService.isScanning())
+        // {
+        //   this.acsBluetoothService.stopScan();
+        // }
+        // this.acsBluetoothService.startScan();
     };
     /**
      * Stop scan bluetooth device
@@ -40,17 +42,14 @@ var AppComponent = (function () {
         this.scanBtnStyle = 'btn-primary';
         this.scanBtnText = 'Start Scanning';
         this.isScanning = false;
-        this.acsBluetoothService.stopScan();
+        // this.acsBluetoothService.stopScan();
     };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: "my-app",
-        templateUrl: 'app.component.html',
-        providers: [
-            ace_bluetooth_service_1.ACSBluetoothService
-        ]
+        templateUrl: 'app.component.html'
     }),
     __metadata("design:paramtypes", [ace_bluetooth_service_1.ACSBluetoothService])
 ], AppComponent);

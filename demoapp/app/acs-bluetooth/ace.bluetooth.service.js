@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var nativescript_acs_bluetooth_1 = require("nativescript-acs-bluetooth");
 //todo consider removeing this service
 var ACSBluetoothService = (function () {
-    function ACSBluetoothService() {
+    function ACSBluetoothService(acsBluetooth) {
+        this.acsBluetooth = acsBluetooth;
         this.connected = false;
         console.log("ACS Bluetooth Service: starting up");
     }
@@ -58,6 +60,6 @@ var ACSBluetoothService = (function () {
 }());
 ACSBluetoothService = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [nativescript_acs_bluetooth_1.ACSBluetooth])
 ], ACSBluetoothService);
 exports.ACSBluetoothService = ACSBluetoothService;

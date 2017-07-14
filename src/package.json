@@ -20,6 +20,7 @@
         "plugin.tscwatch": "npm run tsc -- -w",
         "demo.ios": "npm i && cd ../demo && tns run ios --syncAllFiles",
         "demo.android": "npm i && cd ../demo && tns run android --sdk 23 --syncAllFiles",
+        "demoapp.android": "npm i && cd ../demoapp && tns run android --sdk 23 --syncAllFiles",
         "clean": "rm -rf node_module"
     },
     "repository": {

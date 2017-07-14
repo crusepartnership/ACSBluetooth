@@ -20,6 +20,7 @@ export declare class ACSBluetooth extends Common {
     private adapter;
     private scanning;
     private scanResults;
+    private cback;
     private scanForDevicesCallback;
     constructor(angularZone: NgZone);
     startScanningForDevices(): void;

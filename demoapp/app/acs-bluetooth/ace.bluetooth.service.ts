@@ -8,7 +8,7 @@ export class ACSBluetoothService {
     private connected: boolean = false;
     private bluetoothDevice : BluetoothDevice;
     constructor(
-       // private acsBluetooth: ACSBluetooth
+        private acsBluetooth: ACSBluetooth
     ) {
         console.log("ACS Bluetooth Service: starting up");
     }
