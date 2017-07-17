@@ -25,6 +25,8 @@ export declare class ACSBluetooth extends Common {
     constructor(angularZone: NgZone);
     startScanningForDevices(): void;
     stopScanningForDevices(): void;
+    isPermissionGranted(): boolean;
+    requestCoarseLocationPermission(): any;
     scanningObservable(): Observable<boolean>;
     isScanning(): BehaviorSubject<boolean>;
     scanResultsObservable(): Observable<android.bluetooth.BluetoothDevice[]>;
@@ -33,5 +35,6 @@ export declare class ACSBluetooth extends Common {
     getGattCallback(): any;
     connect(updatedDeviceDetails: any): boolean;
     disconnect(): void;
-    private createOnConnectionStateChangeListener();
+    private createOnConnectionStateChangeListener;
+    private createOnCardStatusChangeListener;
 }

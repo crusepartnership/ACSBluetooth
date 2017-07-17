@@ -14,7 +14,7 @@
         <ListView class="list-group m-10" [items]="deviceList">
             <ng-template let-item="item" let-odd="odd" let-even="even">
                 <StackLayout [class.odd]="odd" [class.even]="even">
-                    <Label class="item-label m-10" [text]="item.address" textWrap="true"  (tap)="onItemTap(item)"></Label>
+                    <Label  class="item-label text-primary m-10" [text]="item.getName()" textWrap="true"  (tap)="onItemTap(item)"></Label>
                 </StackLayout>
             </ng-template>
         </ListView>

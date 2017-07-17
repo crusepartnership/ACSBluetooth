@@ -6,6 +6,7 @@ var rxjs_1 = require("rxjs");
 var core_1 = require("@angular/core");
 var utils = require("tns-core-modules/utils/utils");
 var core_2 = require("@angular/core");
+var application = require("tns-core-modules/application");
 var MyScanCallback = android.bluetooth.le.ScanCallback.extend({
     onBatchScanResults: function (results) {
         console.log("------- scanCallback.onBatchScanResults");
@@ -35,6 +36,7 @@ var MyScanCallback = android.bluetooth.le.ScanCallback.extend({
         console.log("------- scanCallback.onScanResult: " + callbackType);
     }
 });
+var ACCESS_COARSE_LOCATION_PERMISSION_REQUEST_CODE = 222;
 var ACSBluetooth = (function (_super) {
     __extends(ACSBluetooth, _super);
     function ACSBluetooth(angularZone) {
@@ -58,12 +60,11 @@ var ACSBluetooth = (function (_super) {
         _this.scanForDevicesCallback = new android.bluetooth.BluetoothAdapter.LeScanCallback({
             onLeScan: function (device, rssi, data) {
                 try {
-                    console.log("ASCBluetooth: scanResults " + _this);
                     var value_1 = _this.scanResults.getValue();
                     var filteredValues = value_1.filter(function (item) {
                         return item.getAddress() === device.getAddress();
                     });
-                    if (filteredValues.length > 1) {
+                    if (filteredValues.length == 0) {
                         console.log("ASCBluetooth: Scanning discovered new Bluetooth device " + device.getName() + " : " + device.getAddress() + " [" + device.hashCode() + "]");
                         value_1.push(device);
                         console.log("ASCBluetooth: NgZone.isInAngularZone() : " + core_1.NgZone.isInAngularZone());
@@ -79,6 +80,51 @@ var ACSBluetooth = (function (_super) {
                 }
             }
         });
+        _this.createOnConnectionStateChangeListener = function () {
+            console.log('ASCBluetooth:  createOnConnectionStateChangeListener');
+            var that = _this;
+            return new _this.OnConnectionStateChangeListener({
+                onConnectionStateChange: function (gatt, state, newState) {
+                    that.readerState = newState;
+                    console.log(state);
+                    console.log(that.readerState);
+                    if (state !== that.BluetoothGatt.GATT_SUCCESS) {
+                        console.log("ASCBluetooth:  error " + that.bluetoothErrors.gattMessage(state) + " ['" + state + "'] attempting " + that.bluetoothErrors.errorMessage(newState) + ", ['" + newState + "']");
+                    }
+                    else {
+                        console.log('ASCBluetooth:  GATT Success');
+                        if (newState == that.BluetoothProfile.STATE_CONNECTED) {
+                            console.log('ASCBluetooth:  Bluetooth Connected');
+                            console.log(that);
+                            console.log(that.readerManager);
+                            if (that.readerManager != null) {
+                                console.log('ASCBluetooth:  Detect Reader');
+                                that.readerManager.detectReader(gatt, that.gattCallback);
+                            }
+                            else {
+                                console.log('ASCBluetooth:  No valid readerManager');
+                            }
+                        }
+                        else if (newState == that.BluetoothProfile.STATE_DISCONNECTED) {
+                            console.log('ASCBluetooth:  Bluetooth Disconnected');
+                            that.reader = null;
+                            if (gatt != null) {
+                                gatt.close();
+                                gatt = null;
+                            }
+                        }
+                    }
+                }
+            });
+        };
+        _this.createOnCardStatusChangeListener = function () {
+            var that = _this;
+            return new com.acs.bluetooth.BluetoothReader.OnCardStatusChangeListener({
+                onCardStatusChange: function (reader, state) {
+                    console.log('status change');
+                }
+            });
+        };
         console.log("ASCBluetooth: init");
         _this.scanResults = new rxjs_1.BehaviorSubject([]);
         _this.scanning = new rxjs_1.BehaviorSubject(false);
@@ -96,21 +142,7 @@ var ACSBluetooth = (function (_super) {
         this.scanResults.next([]);
         console.log('Starting scan for Bluetooth devices');
         try {
-            var scanner = this.adapter.getBluetoothLeScanner();
-            var scanFilters = null;
-            var scanSettings = new android.bluetooth.le.ScanSettings.Builder();
-            scanSettings.setReportDelay(0);
-            var scanMode = android.bluetooth.le.ScanSettings.SCAN_MODE_LOW_LATENCY;
-            scanSettings.setScanMode(scanMode);
-            if (android.os.Build.VERSION.SDK_INT >= 23) {
-                var matchMode = android.bluetooth.le.ScanSettings.MATCH_MODE_AGGRESSIVE;
-                scanSettings.setMatchMode(matchMode);
-                var matchNum = android.bluetooth.le.ScanSettings.MATCH_NUM_MAX_ADVERTISEMENT;
-                scanSettings.setNumOfMatches(matchNum);
-                var callbackType = android.bluetooth.le.ScanSettings.CALLBACK_TYPE_ALL_MATCHES;
-                scanSettings.setCallbackType(callbackType);
-            }
-            scanner.startScan(this.cback);
+            this.adapter.startLeScan(this.scanForDevicesCallback);
         }
         catch (e) {
             console.log("ASCBluetooth: unable to start scanning for bluetooth devices with message: " + e.message);
@@ -127,6 +159,18 @@ var ACSBluetooth = (function (_super) {
             console.log("ASCBluetooth: Error when attempting to stop scanning for bluetooth devices with message: " + e.message);
         }
     };
+    ACSBluetooth.prototype.isPermissionGranted = function () {
+        var hasPermission = android.os.Build.VERSION.SDK_INT < 23;
+        if (!hasPermission) {
+            hasPermission = android.content.pm.PackageManager.PERMISSION_GRANTED ==
+                android.support.v4.content.ContextCompat.checkSelfPermission(application.android.foregroundActivity, android.Manifest.permission.ACCESS_COARSE_LOCATION);
+        }
+        return hasPermission;
+    };
+    ACSBluetooth.prototype.requestCoarseLocationPermission = function () {
+        return android.support.v4.app.ActivityCompat.requestPermissions(application.android.foregroundActivity, [android.Manifest.permission.ACCESS_COARSE_LOCATION], ACCESS_COARSE_LOCATION_PERMISSION_REQUEST_CODE);
+    };
+    ;
     ACSBluetooth.prototype.scanningObservable = function () {
         return this.scanning.asObservable();
     };
@@ -144,6 +188,7 @@ var ACSBluetooth = (function (_super) {
             if (!this.reader.enableNotification(true)) {
                 console.error('ASCBluetooth:  Unable to enable to notifications');
             }
+            console.log('gDEVICE_INFO_SYSTEM_ID' + this.reader.DEVICE_INFO_SYSTEM_ID);
         }
         else {
             console.error('ASCBluetooth:  Error detecting reader');
@@ -152,7 +197,7 @@ var ACSBluetooth = (function (_super) {
     ACSBluetooth.prototype.createBluetoothReaderGattCallback = function () {
         this.gattCallback = new this.BluetoothReaderGattCallback();
         this.gattCallback.setOnConnectionStateChangeListener(this.createOnConnectionStateChangeListener());
-        return this.gattCallback();
+        return this.gattCallback;
     };
     ACSBluetooth.prototype.getGattCallback = function () {
         return this.gattCallback;
@@ -187,44 +232,11 @@ var ACSBluetooth = (function (_super) {
             this.gatt = null;
         }
     };
-    ACSBluetooth.prototype.createOnConnectionStateChangeListener = function () {
-        console.log('ASCBluetooth:  createOnConnectionStateChangeListener');
-        return new this.OnConnectionStateChangeListener({
-            onConnectionStateChange: function (gatt, state, newState) {
-                this.readerState = newState;
-                if (state !== this.BluetoothGatt.GATT_SUCCESS) {
-                    console.log("ASCBluetooth:  error " + this.bluetoothErrors.gattMessage(state) + " ['" + state + "'] attempting " + this.bluetoothErrors.errorMessage(newState) + ", ['" + newState + "']");
-                }
-                else {
-                    console.log('ASCBluetooth:  GATT Success');
-                    if (newState == this.BluetoothProfile.STATE_CONNECTED) {
-                        console.log('ASCBluetooth:  Bluetooth Connected');
-                        if (this.readerManager != null) {
-                            console.log('ASCBluetooth:  Detect Reader');
-                            this.readerManager.detectReader(gatt, this.gattCallback);
-                        }
-                        else {
-                            console.log('ASCBluetooth:  No valid readerManager');
-                        }
-                    }
-                    else if (newState == this.BluetoothProfile.STATE_DISCONNECTED) {
-                        console.log('ASCBluetooth:  Bluetooth Disconnected');
-                        this.reader = null;
-                        if (gatt != null) {
-                            gatt.close();
-                            gatt = null;
-                        }
-                    }
-                }
-            }
-        });
-    };
     return ACSBluetooth;
 }(acs_bluetooth_common_1.Common));
 ACSBluetooth = __decorate([
     core_2.Injectable(),
-    __metadata("design:paramtypes", [typeof (_a = typeof core_1.NgZone !== "undefined" && core_1.NgZone) === "function" && _a || Object])
+    __metadata("design:paramtypes", [core_1.NgZone])
 ], ACSBluetooth);
 exports.ACSBluetooth = ACSBluetooth;
-var _a;
 //# sourceMappingURL=acs-bluetooth.android.js.map

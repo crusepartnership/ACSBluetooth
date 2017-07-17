@@ -1,4 +1,5 @@
 import {Injectable} from "@angular/core";
+import {Observable} from "rxjs";
 import {ACSBluetooth} from "nativescript-acs-bluetooth";
 
 
@@ -45,7 +46,7 @@ export class ACSBluetoothService {
             address: address
         };
 
-        //this.acsBluetooth.connect(this.bluetoothDevice);
+        this.acsBluetooth.connect(this.bluetoothDevice);
         this.connected = true;
     }
 
@@ -61,6 +62,22 @@ export class ACSBluetoothService {
         // }
     }
 
+    public isPermissionGranted() {
+        return this.acsBluetooth.isPermissionGranted();
+    }
+
+    public requestLocationPermission() {
+        //return this.acsBluetooth.requestCoarseLocationPermission();
+
+        return new Promise (
+            (resolve,reject) => {
+                this.acsBluetooth.requestCoarseLocationPermission();
+                resolve();
+            }
+        )
+
+    }
+
     public startScan() {
         this.acsBluetooth.startScanningForDevices();
     }
@@ -71,10 +88,10 @@ export class ACSBluetoothService {
 
 
     public  isScanning() {
-       // return this.acsBluetooth.isScanning();
+       return this.acsBluetooth.isScanning().getValue();
     }
 
-    // public get scanResults(): Observable<BluetoothDeviceList> {
-    //     return this.acsBluetooth.scanResultsObservable();
-    // }
+    public get scanResults(): Observable<any[]> {
+        return this.acsBluetooth.scanResultsObservable();
+    }
 }

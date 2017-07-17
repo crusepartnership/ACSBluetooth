@@ -20,11 +20,9 @@ var Utils = (function () {
     }
     Utils.SUCCESS_MSG = function () {
         var msg = "Your plugin is working on " + (app.android ? 'Android' : 'iOS') + ".";
-        // setTimeout(() => {
-        //   dialogs.alert(`${msg} For real. It's really working :)`).then(() => console.log(`Dialog closed.`));
-        // }, 2000);
         return msg;
     };
     return Utils;
 }());
 exports.Utils = Utils;
+//# sourceMappingURL=acs-bluetooth.common.js.map
