@@ -94,4 +94,12 @@ export class ACSBluetoothService {
     public get scanResults(): Observable<any[]> {
         return this.acsBluetooth.scanResultsObservable();
     }
+
+    public get isReaderConnnected(): Observable<boolean> {
+        return this.acsBluetooth.isReaderConnnected();
+    }
+
+    public get isCardTapping(): Observable<string> {
+        return this.acsBluetooth.getCardUid();
+    }
 }

@@ -20,6 +20,8 @@ export declare class ACSBluetooth extends Common {
     private adapter;
     private scanning;
     private scanResults;
+    private readerConnnected;
+    private cardUid;
     private cback;
     private scanForDevicesCallback;
     constructor(angularZone: NgZone);
@@ -29,6 +31,8 @@ export declare class ACSBluetooth extends Common {
     requestCoarseLocationPermission(): any;
     scanningObservable(): Observable<boolean>;
     isScanning(): BehaviorSubject<boolean>;
+    isReaderConnnected(): Observable<boolean>;
+    getCardUid(): Observable<string>;
     scanResultsObservable(): Observable<android.bluetooth.BluetoothDevice[]>;
     private onReaderDetection(detectedReader);
     createBluetoothReaderGattCallback(): any;
@@ -37,4 +41,16 @@ export declare class ACSBluetooth extends Common {
     disconnect(): void;
     private createOnConnectionStateChangeListener;
     private createOnCardStatusChangeListener;
+    private createOnEnableNotificationCompleteListener;
+    private createOnAuthenticationCompleteListener;
+    private createOnResponseApduAvailableListener;
+    private createOnEscapeResponseAvailableListener;
+    authenticate(): void;
+    startPolling(): void;
+    stopPolling(): void;
+    disableSleep(): void;
+    requestUid(): void;
+    getResponseString(response: any, errorCode: any): string;
+    hex2Bytes(hexStr: any): any[];
+    toHexString(attr: any): string;
 }

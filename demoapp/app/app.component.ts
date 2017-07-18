@@ -29,6 +29,22 @@ export class AppComponent implements OnInit {
             }
         );
 
+        this.acsBluetoothService.isReaderConnnected.subscribe(
+            cardConnected => {
+                console.log('connection status: '+cardConnected);
+            }
+        );
+
+        this.acsBluetoothService.isCardTapping.subscribe(
+            cardUid => {
+               if(cardUid) {
+                   console.log('tap event');
+               }else {
+                   console.log('nothing');
+               }
+            }
+        );
+
         application.android.on(AndroidApplication.activityRequestPermissionsEvent, (data: AndroidActivityRequestPermissionsEventData) => {
 
             if(this.acsBluetoothService.isPermissionGranted())
@@ -95,5 +111,6 @@ export class AppComponent implements OnInit {
         this.isScanning = false;
         this.acsBluetoothService.stopScan();
     }
-    
+
+
 }
