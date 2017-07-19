@@ -367,7 +367,7 @@ var ACSBluetooth = (function (_super) {
     ACSBluetooth.prototype.toHexString = function (attr) {
         var result = "";
         for (var i = 0; i < attr.length; i++) {
-            result += String.fromCharCode(parseInt(attr[i], 2));
+            result += String.fromCharCode(parseInt(attr[i], 16));
         }
         return result;
     };

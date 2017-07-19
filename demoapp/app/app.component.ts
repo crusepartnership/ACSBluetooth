@@ -70,6 +70,7 @@ export class AppComponent implements OnInit {
         let address = item.getAddress();
         if(address) {
             this.acsBluetoothService.connectBluetoothScanner(address);
+            this.stopScan();
         }
     }
 
@@ -111,6 +112,5 @@ export class AppComponent implements OnInit {
         this.isScanning = false;
         this.acsBluetoothService.stopScan();
     }
-
 
 }

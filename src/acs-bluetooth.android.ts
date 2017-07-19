@@ -504,9 +504,8 @@ export class ACSBluetooth extends Common {
 
         let result = "";
         for (let i = 0; i < attr.length; i++) {
-            result += String.fromCharCode(parseInt(attr[i], 2));
+            result += String.fromCharCode(parseInt(attr[i], 16));
         }
-
         return result;
     }
 }
