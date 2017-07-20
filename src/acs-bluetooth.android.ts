@@ -285,6 +285,13 @@ export class ACSBluetooth extends Common {
 
     // remove any existing gatt connection
     public disconnect() {
+        console.log('disconnected');
+        this.angularZone.run(
+            () => {
+                this.readerConnnected.next(false);
+            }
+        );
+
         if (this.gatt !== null) {
             this.gatt.disconnect();
             this.gatt.close();
@@ -299,7 +306,6 @@ export class ACSBluetooth extends Common {
         return new this.OnConnectionStateChangeListener({
                 onConnectionStateChange: function (gatt, state, newState) {
 
-                    that.readerConnnected.next(false);
                     that.readerState = newState;
                     if (state !== that.BluetoothGatt.GATT_SUCCESS) {
                         console.log(
@@ -310,7 +316,6 @@ export class ACSBluetooth extends Common {
                         console.log('ASCBluetooth:  GATT Success');
                         if (newState == that.BluetoothProfile.STATE_CONNECTED) {
                             console.log('ASCBluetooth:  Bluetooth Connected');
-
 
                             /* Detect the connected reader. */
                             if (that.readerManager != null) {
@@ -376,7 +381,12 @@ export class ACSBluetooth extends Common {
                 if (errorCode == that.BluetoothReader.ERROR_SUCCESS) {
                     that.startPolling();
                     that.disableSleep();
-                    that.readerConnnected.next(true);
+
+                    that.angularZone.run(
+                        () => {
+                            that.readerConnnected.next(true);
+                        }
+                    );
                 } else {
                     console.log('Failed Authenticating (%s)', that.bluetoothErrors.errorMessage(errorCode));
 

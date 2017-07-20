@@ -33,7 +33,7 @@ export class ACSBluetoothService {
      */
     public disconnectBluetoothScanner()
     {
-        this.connected = false;
+        this.acsBluetooth.disconnect();
     }
 
     /**

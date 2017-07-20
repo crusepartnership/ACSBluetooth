@@ -93,7 +93,6 @@ var ACSBluetooth = (function (_super) {
             var that = _this;
             return new _this.OnConnectionStateChangeListener({
                 onConnectionStateChange: function (gatt, state, newState) {
-                    that.readerConnnected.next(false);
                     that.readerState = newState;
                     if (state !== that.BluetoothGatt.GATT_SUCCESS) {
                         console.log("ASCBluetooth:  error " + that.bluetoothErrors.gattMessage(state) + " ['" + state + "'] attempting " + that.bluetoothErrors.errorMessage(newState) + ", ['" + newState + "']");
@@ -158,7 +157,9 @@ var ACSBluetooth = (function (_super) {
                     if (errorCode == that.BluetoothReader.ERROR_SUCCESS) {
                         that.startPolling();
                         that.disableSleep();
-                        that.readerConnnected.next(true);
+                        that.angularZone.run(function () {
+                            that.readerConnnected.next(true);
+                        });
                     }
                     else {
                         console.log('Failed Authenticating (%s)', that.bluetoothErrors.errorMessage(errorCode));
@@ -301,6 +302,11 @@ var ACSBluetooth = (function (_super) {
         }
     };
     ACSBluetooth.prototype.disconnect = function () {
+        var _this = this;
+        console.log('disconnected');
+        this.angularZone.run(function () {
+            _this.readerConnnected.next(false);
+        });
         if (this.gatt !== null) {
             this.gatt.disconnect();
             this.gatt.close();
