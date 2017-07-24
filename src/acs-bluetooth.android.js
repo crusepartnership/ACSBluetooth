@@ -129,10 +129,14 @@ var ACSBluetooth = (function (_super) {
                         that.requestUid();
                     }
                     else if (state == that.BluetoothReader.CARD_STATUS_ABSENT) {
-                        that.cardUid.next('');
+                        that.angularZone.run(function () {
+                            that.cardUid.next('');
+                        });
                     }
                     else {
-                        that.cardUid.next('');
+                        that.angularZone.run(function () {
+                            that.cardUid.next('');
+                        });
                     }
                 }
             });
@@ -172,8 +176,10 @@ var ACSBluetooth = (function (_super) {
             return new com.acs.bluetooth.BluetoothReader.OnResponseApduAvailableListener({
                 onResponseApduAvailable: function (reader, byte, errorCode) {
                     try {
-                        var response = that.getResponseString(byte, errorCode);
-                        that.cardUid.next(response);
+                        var response_1 = that.getResponseString(byte, errorCode);
+                        that.angularZone.run(function () {
+                            that.cardUid.next(response_1);
+                        });
                     }
                     catch (e) {
                         console.log(e.message);
@@ -280,6 +286,7 @@ var ACSBluetooth = (function (_super) {
     };
     ACSBluetooth.prototype.connect = function (updatedDeviceDetails) {
         console.log('ASCBluetooth:  Connecting Reader');
+        4E420561;
         try {
             if (!updatedDeviceDetails.address) {
                 console.log("ASCBluetooth: No device address was supplied");
@@ -373,7 +380,14 @@ var ACSBluetooth = (function (_super) {
     ACSBluetooth.prototype.toHexString = function (attr) {
         var result = "";
         for (var i = 0; i < attr.length; i++) {
-            result += String.fromCharCode(parseInt(attr[i], 16));
+            var num = parseInt(attr[i]);
+            if (num > 0) {
+                var hexStr = num.toString(16);
+                if (hexStr.length < 2) {
+                    hexStr = '0' + hexStr;
+                }
+                result += hexStr.toUpperCase();
+            }
         }
         return result;
     };

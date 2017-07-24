@@ -252,6 +252,7 @@ export class ACSBluetooth extends Common {
 
     public connect(updatedDeviceDetails) {
         console.log('ASCBluetooth:  Connecting Reader');
+4E420561
 
         try {
             if (!updatedDeviceDetails.address) {
@@ -351,9 +352,18 @@ export class ACSBluetooth extends Common {
 
                         that.requestUid();
                     }else if(state == that.BluetoothReader.CARD_STATUS_ABSENT) {
-                        that.cardUid.next('');
+                        that.angularZone.run(
+                            () => {
+                                that.cardUid.next('');
+                            }
+                        );
+
                     }else {
-                        that.cardUid.next('');
+                        that.angularZone.run(
+                            () => {
+                                that.cardUid.next('');
+                            }
+                        );
                     }
                 }
             }
@@ -403,7 +413,12 @@ export class ACSBluetooth extends Common {
             onResponseApduAvailable: function(reader, byte, errorCode) {
                 try {
                     let response = that.getResponseString(byte, errorCode);
-                    that.cardUid.next(response);
+
+                    that.angularZone.run(
+                        () => {
+                            that.cardUid.next(response);
+                        }
+                    );
                 } catch (e) {
                     console.log(e.message);
                 }
@@ -514,7 +529,15 @@ export class ACSBluetooth extends Common {
 
         let result = "";
         for (let i = 0; i < attr.length; i++) {
-            result += String.fromCharCode(parseInt(attr[i], 16));
+            let num = parseInt(attr[i]);
+            if (num>0) {
+                let hexStr = num.toString(16);
+                if(hexStr.length<2)
+                {
+                    hexStr = '0' +hexStr;
+                }
+                result += hexStr.toUpperCase();
+            }
         }
         return result;
     }
