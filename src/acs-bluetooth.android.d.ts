@@ -20,9 +20,8 @@ export declare class ACSBluetooth extends Common {
     private adapter;
     private scanning;
     private scanResults;
-    private readerConnnected;
+    private readerConnected;
     private cardUid;
-    private cback;
     private scanForDevicesCallback;
     constructor(angularZone: NgZone);
     startScanningForDevices(): void;
@@ -31,7 +30,7 @@ export declare class ACSBluetooth extends Common {
     requestCoarseLocationPermission(): any;
     scanningObservable(): Observable<boolean>;
     isScanning(): BehaviorSubject<boolean>;
-    isReaderConnnected(): Observable<boolean>;
+    isReaderConnected(): Observable<boolean>;
     getCardUid(): Observable<string>;
     scanResultsObservable(): Observable<android.bluetooth.BluetoothDevice[]>;
     private onReaderDetection(detectedReader);

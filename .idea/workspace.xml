@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="835fdd55-6b67-4466-9394-a9ab9d8c36e7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/package.json" afterPath="$PROJECT_DIR$/src/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/acs-bluetooth.android.d.ts" afterPath="$PROJECT_DIR$/src/acs-bluetooth.android.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/acs-bluetooth.android.js" afterPath="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/acs-bluetooth.android.js.map" afterPath="$PROJECT_DIR$/src/acs-bluetooth.android.js.map" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,7 +29,7 @@
       <file leaf-file-name="ace.bluetooth.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
+            <state relative-caret-position="2300">
               <caret line="102" column="37" lean-forward="false" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -38,40 +41,31 @@
       <file leaf-file-name="acs-bluetooth.android.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/acs-bluetooth.android.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="180" column="71" lean-forward="false" selection-start-line="180" selection-start-column="71" selection-end-line="180" selection-end-column="71" />
+            <state relative-caret-position="260">
+              <caret line="292" column="52" lean-forward="false" selection-start-line="292" selection-start-column="37" selection-end-line="292" selection-end-column="52" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#525#593#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tslint.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tslint.json">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="46">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1219">
+              <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -80,7 +74,7 @@
       <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demoapp/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="161">
               <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
@@ -99,12 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>next</find>
-      <find>isCardTapping</find>
-      <find>replace</find>
-      <find>BluetoothProfile</find>
-      <find>isConnected</find>
-      <find>OnConnectionStateChangeListener</find>
       <find>createOnCardStatusChangeListener</find>
       <find>tns-</find>
       <find>connect</find>
@@ -115,10 +103,8 @@
       <find>disconnect</find>
       <find>disconnected</find>
       <find>scanResultsObservable</find>
-      <find>angularZone</find>
       <find>this.scanResults</find>
       <find>this.angularZone.run</find>
-      <find>readerConnnected</find>
       <find>this.angularZone</find>
       <find>nothing</find>
       <find>disconnectBluetoothScanner</find>
@@ -129,14 +115,24 @@
       <find>toHexString</find>
       <find>isReaderConnnected</find>
       <find>cardUid</find>
+      <find>request succ</find>
+      <find>MyScanCallback</find>
+      <find>cback</find>
+      <find>angularZone</find>
+      <find>ASCBluetooth:</find>
+      <find>readerConnnected</find>
+      <find>Connnected</find>
+      <find>readerConnected</find>
     </findStrings>
     <replaceStrings>
       <replace>that</replace>
       <replace>let</replace>
+      <replace>readerConnected</replace>
+      <replace>Connected</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/demo</dir>
+      <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -163,6 +159,7 @@
         <option value="$PROJECT_DIR$/demoapp/app/app.module.ts" />
         <option value="$PROJECT_DIR$/demoapp/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/references.d.ts" />
+        <option value="$PROJECT_DIR$/src/package.json" />
         <option value="$PROJECT_DIR$/demoapp/app/app.less" />
         <option value="$PROJECT_DIR$/demoapp/app/app.css" />
         <option value="$PROJECT_DIR$/demoapp/package.json" />
@@ -172,20 +169,25 @@
         <option value="$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.ts" />
         <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
         <option value="$PROJECT_DIR$/src/acs-bluetooth.android.ts" />
-        <option value="$PROJECT_DIR$/src/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1758" />
-    <option name="y" value="-43" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="802" />
   </component>
@@ -204,34 +206,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ACSBluetooth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ACSBluetooth" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ACSBluetooth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ACSBluetooth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ACSBluetooth" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="demo" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ACSBluetooth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ACSBluetooth" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="demoapp" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ACSBluetooth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ACSBluetooth" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ACSBluetooth" type="462c0819:PsiDirectoryNode" />
+              <item name="demoapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,50 +337,57 @@
       <workItem from="1500246124406" duration="61449000" />
       <workItem from="1500424874454" duration="25578000" />
       <workItem from="1500590059962" duration="15198000" />
-      <workItem from="1500873163343" duration="889000" />
+      <workItem from="1500873163343" duration="981000" />
+      <workItem from="1501025811420" duration="480000" />
+      <workItem from="1501115445428" duration="3656000" />
+      <workItem from="1501565639205" duration="6223000" />
+      <workItem from="1501808123923" duration="893000" />
+      <workItem from="1502074343652" duration="2019000" />
+      <workItem from="1502163719348" duration="3534000" />
     </task>
+    <task id="LOCAL-00001" summary="Make tap event can obtain card uid, and make changes on view [INTEGRALCS-5676]">
+      <created>1500874514799</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1500874514799</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Obtain reader connected status when reader disconnect [INTEGRALCS-5676]">
+      <created>1502252798452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1502252798452</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130746000" />
+    <option name="totallyTimeSpent" value="146370000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="1412" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="802" extended-state="6" />
     <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20789288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18295372" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28169015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Codecept Form" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.281471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33239436" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28169015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42706132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -414,55 +413,42 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js.map" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js" />
-        <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.js" />
+        <option value="$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.js" />
         <option value="$PROJECT_DIR$/src/acs-bluetooth.ios.js" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js.map" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.ios.d.ts" />
         <option value="$PROJECT_DIR$/src/acs-bluetooth.ios.js.map" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.d.ts" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js.map" />
+        <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.js" />
+        <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.d.ts" />
         <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.js.map" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.d.ts" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js.map" />
+        <option value="$PROJECT_DIR$/demo/app/app.js" />
+        <option value="$PROJECT_DIR$/demo/app/main-page.js" />
+        <option value="$PROJECT_DIR$/demo/app/main-view-model.js" />
+        <option value="$PROJECT_DIR$/demoapp/app/main.aot.js" />
+        <option value="$PROJECT_DIR$/demoapp/app/app.component.js" />
         <option value="$PROJECT_DIR$/demoapp/app/app.module.js" />
         <option value="$PROJECT_DIR$/demoapp/app/main.js" />
-        <option value="$PROJECT_DIR$/demoapp/app/app.component.js" />
-        <option value="$PROJECT_DIR$/demoapp/app/main.aot.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/main.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/app.routing.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/app.module.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/app.component.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/config.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/tests/user/user.service.spec.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/tests/user/user.model.spec.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/scan/scan.routing.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/scan/scan.component.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/scan/scan.module.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/login/login.routung.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/login/login.component.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/login/login.module.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/settings/settings.component.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/settings/settings.routing.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/settings/settings.module.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/views/settings/search.component.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/acs/acs.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/log/log.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/area/area.model.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/area/area.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/auth/auth-guard.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/http/http.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/user/user.model.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/user/user.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/user/user.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/utls/utils.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/session/session.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/setting/setting.model.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/setting/setting.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/tapevent/tapevent.model.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/tapevent/tapevent.service.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/couchbase/CouchbaseInstance.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/accesspoint/accesspoint.model.js" />
-        <option value="$PROJECT_DIR$/../onsite-app/app/shared/database/DatabaseService.js" />
+        <option value="$PROJECT_DIR$/demoapp/app/acs-bluetooth/bluetoothDevice.interface.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/scan/scan.routing.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/scan/scan.module.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/scan/scan.component.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/disabled/disabled.component.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/disabled/disabled.module.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/disabled/disabled.routing.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/signedin/signedin.routing.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/signedin/signedin.component.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/signedin/signedin.module.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/signedout/signedout.module.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/signedout/signedout.routing.js" />
+        <option value="$PROJECT_DIR$/../onsite-app/app/signedout/signedout.component.js" />
       </list>
     </option>
   </component>
@@ -495,6 +481,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Make tap event can obtain card uid, and make changes on view [INTEGRALCS-5676]" />
+    <MESSAGE value="Obtain reader connected status when reader disconnect [INTEGRALCS-5676]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Obtain reader connected status when reader disconnect [INTEGRALCS-5676]" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -502,14 +493,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tslint.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/app/App_Resources/Android/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -594,6 +577,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -619,6 +603,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -706,18 +691,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demoapp/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,15 +715,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demoapp/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="161">
           <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
+        <state relative-caret-position="2300">
           <caret line="102" column="37" lean-forward="false" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -755,11 +741,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/acs-bluetooth.android.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="180" column="71" lean-forward="false" selection-start-line="180" selection-start-column="71" selection-end-line="180" selection-end-column="71" />
+        <state relative-caret-position="260">
+          <caret line="292" column="52" lean-forward="false" selection-start-line="292" selection-start-column="37" selection-end-line="292" selection-end-column="52" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#525#593#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
