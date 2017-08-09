@@ -44,14 +44,14 @@
     "homepage": "https://github.com/lukeluluke/nativescript-acs-bluetooth",
     "readmeFilename": "README.md",
     "peerDependencies": {
-        "tns-core-modules": "~2.5.2"
+        "tns-core-modules": "^3.1.0"
     },
     "devDependencies": {
         "reflect-metadata": "~0.1.8",
         "zone.js": "^0.8.4",
         "rxjs": "^5.4.1",
         "@angular/core": "^4.0.0",
-        "tns-core-modules": "~2.5.2",
+        "tns-core-modules": "^3.1.0",
         "tns-platform-declarations": "^3.0.1",
         "typescript": "^2.3.4",
         "prompt": "^1.0.0",
