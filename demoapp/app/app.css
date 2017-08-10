@@ -1,0 +1,16 @@
+@import "nativescript-theme-core/css/core.light.css";
+
+.odd {
+    background-color: #f1f2f2;
+    vertical-align: middle
+}
+
+.even {
+    vertical-align: middle;
+    background-color: #ffffff
+}
+
+.item-label {
+    font-size: 20;
+    vertical-align: center
+}
