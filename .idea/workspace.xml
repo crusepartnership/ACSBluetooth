@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="835fdd55-6b67-4466-9394-a9ab9d8c36e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/acs-bluetooth.android.d.ts" afterPath="$PROJECT_DIR$/src/acs-bluetooth.android.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/acs-bluetooth.android.js" afterPath="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/acs-bluetooth.android.js.map" afterPath="$PROJECT_DIR$/src/acs-bluetooth.android.js.map" />
+    <list default="true" id="835fdd55-6b67-4466-9394-a9ab9d8c36e7" name="Default" comment="Obtain reader connected status when reader disconnect [INTEGRALCS-5676]">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/index.d.ts" afterPath="$PROJECT_DIR$/src/index.d.ts" />
+      <change beforePath="$PROJECT_DIR$/src/package-lock.json" afterPath="$PROJECT_DIR$/src/package-lock.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,63 +24,80 @@
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ace.bluetooth.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2300">
-              <caret line="102" column="37" lean-forward="false" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acs-bluetooth.android.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/acs-bluetooth.android.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="292" column="52" lean-forward="false" selection-start-line="292" selection-start-column="37" selection-end-line="292" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-                <element signature="e#525#593#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1219">
-              <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demoapp/app/app.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="acs-bluetooth.android.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/acs-bluetooth.android.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="344">
+                  <caret line="115" column="21" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#525#593#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/demoapp/app/app.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="368">
+                  <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/index.d.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="acs-bluetooth.android.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/acs-bluetooth.android.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="714">
+                  <caret line="156" column="25" lean-forward="false" selection-start-line="156" selection-start-column="12" selection-end-line="156" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#525#593#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1173">
+                  <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,15 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>createOnCardStatusChangeListener</find>
-      <find>tns-</find>
-      <find>connect</find>
-      <find>conn</find>
-      <find>discone</find>
-      <find>disconnect(</find>
-      <find>that.readerConnnected</find>
-      <find>disconnect</find>
-      <find>disconnected</find>
       <find>scanResultsObservable</find>
       <find>this.scanResults</find>
       <find>this.angularZone.run</find>
@@ -122,7 +129,16 @@
       <find>ASCBluetooth:</find>
       <find>readerConnnected</find>
       <find>Connnected</find>
+      <find>scanForDevicesCallback</find>
+      <find>connect(</find>
+      <find>getCarduui</find>
+      <find>tx</find>
+      <find>getvalue</find>
+      <find>scanResults</find>
+      <find>isScanning</find>
       <find>readerConnected</find>
+      <find>isscanning</find>
+      <find>this.scanning</find>
     </findStrings>
     <replaceStrings>
       <replace>that</replace>
@@ -169,6 +185,7 @@
         <option value="$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.ts" />
         <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
         <option value="$PROJECT_DIR$/src/acs-bluetooth.android.ts" />
+        <option value="$PROJECT_DIR$/src/index.d.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -186,10 +203,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="802" />
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/demoapp/node_modules" />
+    <handled-path value="$PROJECT_DIR$/src/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1408" />
+    <option name="y" value="-517" />
+    <option name="width" value="2560" />
+    <option name="height" value="1417" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -206,6 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,12 +241,28 @@
               <item name="ACSBluetooth" type="462c0819:PsiDirectoryNode" />
               <item name="demoapp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ACSBluetooth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ACSBluetooth" type="462c0819:PsiDirectoryNode" />
+              <item name="demoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ACSBluetooth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ACSBluetooth" type="462c0819:PsiDirectoryNode" />
+              <item name="demoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="hooks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ACSBluetooth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ACSBluetooth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,14 +295,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -321,9 +352,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -344,6 +386,14 @@
       <workItem from="1501808123923" duration="893000" />
       <workItem from="1502074343652" duration="2019000" />
       <workItem from="1502163719348" duration="3534000" />
+      <workItem from="1516755563340" duration="3827000" />
+      <workItem from="1517524714869" duration="466000" />
+      <workItem from="1518482605475" duration="576000" />
+      <workItem from="1518491147376" duration="665000" />
+      <workItem from="1519185231717" duration="1293000" />
+      <workItem from="1519360774489" duration="47000" />
+      <workItem from="1519362159507" duration="64000" />
+      <workItem from="1519691689099" duration="873000" />
     </task>
     <task id="LOCAL-00001" summary="Make tap event can obtain card uid, and make changes on view [INTEGRALCS-5676]">
       <created>1500874514799</created>
@@ -363,20 +413,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146370000" />
+    <option name="totallyTimeSpent" value="155308000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="802" extended-state="6" />
+    <frame x="1408" y="-517" width="2560" height="1417" extended-state="0" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20789288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.116187476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.281471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25789067" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -416,27 +467,8 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.js" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.ios.js" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.ios.d.ts" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.ios.js.map" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.d.ts" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js.map" />
-        <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.js" />
-        <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.d.ts" />
-        <option value="$PROJECT_DIR$/src/bluetooth-gatt-errors.js.map" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.d.ts" />
-        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js.map" />
         <option value="$PROJECT_DIR$/demo/app/app.js" />
         <option value="$PROJECT_DIR$/demo/app/main-page.js" />
-        <option value="$PROJECT_DIR$/demo/app/main-view-model.js" />
-        <option value="$PROJECT_DIR$/demoapp/app/main.aot.js" />
-        <option value="$PROJECT_DIR$/demoapp/app/app.component.js" />
-        <option value="$PROJECT_DIR$/demoapp/app/app.module.js" />
-        <option value="$PROJECT_DIR$/demoapp/app/main.js" />
-        <option value="$PROJECT_DIR$/demoapp/app/acs-bluetooth/bluetoothDevice.interface.js" />
         <option value="$PROJECT_DIR$/../onsite-app/app/scan/scan.routing.js" />
         <option value="$PROJECT_DIR$/../onsite-app/app/scan/scan.module.js" />
         <option value="$PROJECT_DIR$/../onsite-app/app/scan/scan.component.js" />
@@ -449,6 +481,9 @@
         <option value="$PROJECT_DIR$/../onsite-app/app/signedout/signedout.module.js" />
         <option value="$PROJECT_DIR$/../onsite-app/app/signedout/signedout.routing.js" />
         <option value="$PROJECT_DIR$/../onsite-app/app/signedout/signedout.component.js" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.android.js" />
+        <option value="$PROJECT_DIR$/demo/app/main-view-model.js" />
+        <option value="$PROJECT_DIR$/src/acs-bluetooth.common.js.map" />
       </list>
     </option>
   </component>
@@ -493,13 +528,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/app/App_Resources/Android/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/platforms/android/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -533,13 +561,13 @@
     <entry file="file://$PROJECT_DIR$/demoapp/node_modules/nativescript-acs-bluetooth/acs-bluetooth.common.d.ts" />
     <entry file="file://$PROJECT_DIR$/demoapp/node_modules/nativescript-acs-bluetooth/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/src/acs-bluetooth.android.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="70" lean-forward="true" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.js">
@@ -603,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,8 +699,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demoapp/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        <state relative-caret-position="138">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -699,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demoapp/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="101" lean-forward="false" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/acs-bluetooth.android.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -715,36 +735,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demoapp/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="309">
+          <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demoapp/app/acs-bluetooth/ace.bluetooth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2300">
-          <caret line="102" column="37" lean-forward="false" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <caret line="102" column="43" lean-forward="false" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demoapp/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/acs-bluetooth.android.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="292" column="52" lean-forward="false" selection-start-line="292" selection-start-column="37" selection-end-line="292" selection-end-column="52" />
+        <state relative-caret-position="344">
+          <caret line="115" column="21" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="21" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
             <element signature="e#525#593#0" expanded="false" />
           </folding>
         </state>
@@ -752,8 +783,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="345">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>
