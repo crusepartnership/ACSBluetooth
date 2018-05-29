@@ -51,5 +51,5 @@ export declare class ACSBluetooth extends Common {
     requestUid(): void;
     getResponseString(response: any, errorCode: any): string;
     hex2Bytes(hexStr: any): any[];
-    toHexString(attr: any): string;
+    private toHexString(uint8arr);
 }
