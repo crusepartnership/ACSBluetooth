@@ -513,23 +513,21 @@ export class ACSBluetooth extends Common {
 
     /**
      * Convert hex to string
-     * @param attr
+     * @param uint8arr
      * @returns {string}
      */
-    public toHexString(attr) {
-
-        let result = "";
-        for (let i = 0; i < attr.length; i++) {
-            let num = parseInt(attr[i]);
-            if (num>0) {
-                let hexStr = num.toString(16);
-                if(hexStr.length<2)
-                {
-                    hexStr = '0' +hexStr;
-                }
-                result += hexStr.toUpperCase();
-            }
+    private toHexString(uint8arr) {
+        if (!uint8arr) {
+            return '';
         }
-        return result;
+
+        let hexStr = '';
+        for (let i = 0; i < uint8arr.length; i++) {
+            let hex = (uint8arr[i] & 0xFF).toString(16);
+            hex = (hex.length === 1) ? '0' + hex : hex;
+            hexStr += hex.slice(-2);
+        }
+
+        return hexStr.substr(0,8).toUpperCase();
     }
 }

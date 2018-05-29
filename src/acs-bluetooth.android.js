@@ -348,26 +348,23 @@ var ACSBluetooth = (function (_super) {
         }
         return result;
     };
-    ACSBluetooth.prototype.toHexString = function (attr) {
-        var result = "";
-        for (var i = 0; i < attr.length; i++) {
-            var num = parseInt(attr[i]);
-            if (num > 0) {
-                var hexStr = num.toString(16);
-                if (hexStr.length < 2) {
-                    hexStr = '0' + hexStr;
-                }
-                result += hexStr.toUpperCase();
-            }
+    ACSBluetooth.prototype.toHexString = function (uint8arr) {
+        if (!uint8arr) {
+            return '';
         }
-        return result;
+        var hexStr = '';
+        for (var i = 0; i < uint8arr.length; i++) {
+            var hex = (uint8arr[i] & 0xFF).toString(16);
+            hex = (hex.length === 1) ? '0' + hex : hex;
+            hexStr += hex.slice(-2);
+        }
+        return hexStr.substr(0, 8).toUpperCase();
     };
     ACSBluetooth = __decorate([
         core_2.Injectable(),
-        __metadata("design:paramtypes", [typeof (_a = typeof core_1.NgZone !== "undefined" && core_1.NgZone) === "function" && _a || Object])
+        __metadata("design:paramtypes", [core_1.NgZone])
     ], ACSBluetooth);
     return ACSBluetooth;
-    var _a;
 }(acs_bluetooth_common_1.Common));
 exports.ACSBluetooth = ACSBluetooth;
 //# sourceMappingURL=acs-bluetooth.android.js.map
