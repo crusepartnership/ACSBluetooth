@@ -1,13 +1,12 @@
 {
     "name": "nativescript-acs-bluetooth",
-    "version": "2.1.2",
-    "description": "Your awesome NativeScript plugin.",
+    "version": "2.2.0",
+    "description": "NativeScript ASB bluetooth card reader interface",
     "main": "acs-bluetooth",
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
             "android": "3.0.0",
-            "ios": "3.0.0"
         }
     },
     "scripts": {
@@ -31,11 +30,12 @@
         "NativeScript",
         "JavaScript",
         "Android",
-        "iOS"
+        "ACS",
+        "Bluetooth"
     ],
     "author": {
-        "name": "Your Name",
-        "email": "youremail@yourdomain.com"
+        "name": "Lucidity Software",
+        "email": "developer@luciditysoftware.com.au"
     },
     "bugs": {
         "url": "https://github.com/luciditysoftware/ACSBluetooth/issues"
