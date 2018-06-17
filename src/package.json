@@ -1,6 +1,6 @@
 {
     "name": "nativescript-acs-bluetooth",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "description": "NativeScript ASB bluetooth card reader interface",
     "main": "acs-bluetooth",
     "typings": "index.d.ts",
@@ -20,7 +20,8 @@
         "demo.ios": "npm i && cd ../demo && tns run ios --syncAllFiles",
         "demo.android": "npm i && cd ../demo && tns run android --device=54ab411c --sdk 23 --syncAllFiles",
         "demoapp.android": "npm i && cd ../demoapp && tns run android --device=54ab411c --sdk 23 --syncAllFiles",
-        "clean": "rm -rf node_module"
+        "clean": "rm -rf node_module",
+        "npm-package": "tsc && npm publish"
     },
     "repository": {
         "type": "git",
