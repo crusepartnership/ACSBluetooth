@@ -360,11 +360,11 @@ var ACSBluetooth = (function (_super) {
         }
         return hexStr.substr(0, 8).toUpperCase();
     };
+    ACSBluetooth = __decorate([
+        core_2.Injectable(),
+        __metadata("design:paramtypes", [core_1.NgZone])
+    ], ACSBluetooth);
     return ACSBluetooth;
 }(acs_bluetooth_common_1.Common));
-ACSBluetooth = __decorate([
-    core_2.Injectable(),
-    __metadata("design:paramtypes", [core_1.NgZone])
-], ACSBluetooth);
 exports.ACSBluetooth = ACSBluetooth;
 //# sourceMappingURL=acs-bluetooth.android.js.map

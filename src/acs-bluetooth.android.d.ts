@@ -33,7 +33,7 @@ export declare class ACSBluetooth extends Common {
     isReaderConnected(): Observable<boolean>;
     getCardUid(): Observable<string>;
     scanResultsObservable(): Observable<android.bluetooth.BluetoothDevice[]>;
-    private onReaderDetection(detectedReader);
+    private onReaderDetection;
     createBluetoothReaderGattCallback(): any;
     getGattCallback(): any;
     connect(updatedDeviceDetails: any): boolean;
@@ -51,5 +51,5 @@ export declare class ACSBluetooth extends Common {
     requestUid(): void;
     getResponseString(response: any, errorCode: any): string;
     hex2Bytes(hexStr: any): any[];
-    private toHexString(uint8arr);
+    private toHexString;
 }
