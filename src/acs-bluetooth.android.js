@@ -13,7 +13,8 @@ var COMMANDS = {
     AUTO_POLLING_STOP: 'E0 00 00 40 00',
     APDU_COMMAND_UID: 'FF CA 00 00 00',
     APDU_COMMAND_ATS: 'FF CA 01 00 00',
-    SLEEP_COMMAND_DISABLE: 'E0 00 00 48 04'
+    SLEEP_COMMAND_DISABLE: 'E0 00 00 48 04',
+    COMMAND_BEEP: 'E0 00 00 28 01 50'
 };
 var MASTER_KEY = '41 43 52 31 32 35 35 55 2D 4A 31 20 41 75 74 68';
 var ACSBluetooth = (function (_super) {
@@ -101,11 +102,13 @@ var ACSBluetooth = (function (_super) {
                     if (state == that.BluetoothReader.CARD_STATUS_PRESENT) {
                         that.requestUid();
                     }
-                    else if (state == that.BluetoothReader.CARD_STATUS_ABSENT) {
-                        that.angularZone.run(function () {
-                            that.cardUid.next('');
-                        });
-                    }
+                    // TO BE REVERTED IF CAUSE ANY ISSUE
+                    // else if (state == that.BluetoothReader.CARD_STATUS_ABSENT) {
+                    //     that.angularZone.run(function () {
+                    //         that.cardUid.next('');
+                    //     });
+                    // }
+                    
                     else {
                         that.angularZone.run(function () {
                             that.cardUid.next('');
@@ -360,6 +363,14 @@ var ACSBluetooth = (function (_super) {
         }
         return hexStr.substr(0, 8).toUpperCase();
     };
+
+    ACSBluetooth.prototype.beep = function () {
+        var _this = this;
+        if (this.reader) {
+            _this.reader.transmitEscapeCommand(_this.hex2Bytes(COMMANDS['COMMAND_BEEP']));
+        }
+    };
+
     return ACSBluetooth;
 }(acs_bluetooth_common_1.Common));
 ACSBluetooth = __decorate([
