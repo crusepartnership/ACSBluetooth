@@ -15,4 +15,5 @@ export declare class ACSBluetooth extends Common {
     public getCardUid(): Observable<string>;
     public isReaderConnected(): Observable<boolean>;
     public scanResultsObservable(): Observable<any>;
+    public beep(): void;
 }

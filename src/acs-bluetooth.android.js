@@ -14,7 +14,8 @@ var COMMANDS = {
     APDU_COMMAND_UID: 'FF CA 00 00 00',
     APDU_COMMAND_ATS: 'FF CA 01 00 00',
     SLEEP_COMMAND_DISABLE: 'E0 00 00 48 04',
-    COMMAND_BEEP: 'E0 00 00 28 01 50'
+    COMMAND_BEEP: 'E0 00 00 28 01 50',
+    COMMAND_ENABLE_BUZZER: 'E0 00 00 21 01 7F'
 };
 var MASTER_KEY = '41 43 52 31 32 35 35 55 2D 4A 31 20 41 75 74 68';
 var ACSBluetooth = (function (_super) {
@@ -102,13 +103,6 @@ var ACSBluetooth = (function (_super) {
                     if (state == that.BluetoothReader.CARD_STATUS_PRESENT) {
                         that.requestUid();
                     }
-                    // TO BE REVERTED IF CAUSE ANY ISSUE
-                    // else if (state == that.BluetoothReader.CARD_STATUS_ABSENT) {
-                    //     that.angularZone.run(function () {
-                    //         that.cardUid.next('');
-                    //     });
-                    // }
-                    
                     else {
                         that.angularZone.run(function () {
                             that.cardUid.next('');
@@ -303,9 +297,15 @@ var ACSBluetooth = (function (_super) {
             console.log('error when authenticate');
         }
     };
+    ACSBluetooth.prototype.beep = function () {
+        if (this.reader) {
+            this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['COMMAND_BEEP']));
+        }
+    };
     ACSBluetooth.prototype.startPolling = function () {
         if (this.reader) {
             this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['AUTO_POLLING_START']));
+            this.reader.transmitEscapeCommand(this.hex2Bytes('COMMAND_ENABLE_BUZZER'));
         }
     };
     ACSBluetooth.prototype.stopPolling = function () {
@@ -363,19 +363,11 @@ var ACSBluetooth = (function (_super) {
         }
         return hexStr.substr(0, 8).toUpperCase();
     };
-
-    ACSBluetooth.prototype.beep = function () {
-        var _this = this;
-        if (this.reader) {
-            _this.reader.transmitEscapeCommand(_this.hex2Bytes(COMMANDS['COMMAND_BEEP']));
-        }
-    };
-
+    ACSBluetooth = __decorate([
+        core_2.Injectable(),
+        __metadata("design:paramtypes", [core_1.NgZone])
+    ], ACSBluetooth);
     return ACSBluetooth;
 }(acs_bluetooth_common_1.Common));
-ACSBluetooth = __decorate([
-    core_2.Injectable(),
-    __metadata("design:paramtypes", [core_1.NgZone])
-], ACSBluetooth);
 exports.ACSBluetooth = ACSBluetooth;
 //# sourceMappingURL=acs-bluetooth.android.js.map
