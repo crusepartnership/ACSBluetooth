@@ -335,14 +335,14 @@ export class ACSBluetooth extends Common {
                         that.requestUid();
                     }
 
-                    // REVERT IF ANY ISSUE FOUND
-                    // else if(state == that.BluetoothReader.CARD_STATUS_ABSENT) {
-                    //     that.angularZone.run(
-                    //         () => {
-                    //             that.cardUid.next('');
-                    //         }
-                    //     );
-                    // }
+                    else if(state == that.BluetoothReader.CARD_STATUS_ABSENT) {
+                        // REVERT IF ANY ISSUE FOUND
+                        // that.angularZone.run(
+                        //     () => {
+                        //         that.cardUid.next('');
+                        //     }
+                        // );
+                    }
 
                     else {
                         that.angularZone.run(
@@ -445,8 +445,9 @@ export class ACSBluetooth extends Common {
      * Beep card reader
      */
     public beep() {
+        let _this = this;
         if(this.reader) {
-            this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['COMMAND_BEEP']));
+            _this.reader.transmitEscapeCommand(_this.hex2Bytes(COMMANDS['COMMAND_BEEP']));
         }
 
     }
@@ -457,7 +458,7 @@ export class ACSBluetooth extends Common {
     public startPolling() {
         if(this.reader) {
             this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['AUTO_POLLING_START']));
-            this.reader.transmitEscapeCommand(this.hex2Bytes('COMMAND_ENABLE_BUZZER'));
+            this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['COMMAND_ENABLE_BUZZER']));
 
         }
 

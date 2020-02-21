@@ -1,6 +1,6 @@
 {
     "name": "nativescript-acs-bluetooth",
-    "version": "2.2.2",
+    "version": "2.2.4",
     "description": "NativeScript ASB bluetooth card reader interface",
     "main": "acs-bluetooth",
     "typings": "index.d.ts",

@@ -21,26 +21,26 @@ var MASTER_KEY = '41 43 52 31 32 35 35 55 2D 4A 31 20 41 75 74 68';
 var ACSBluetooth = (function (_super) {
     __extends(ACSBluetooth, _super);
     function ACSBluetooth(angularZone) {
-        var _this = _super.call(this) || this;
-        _this.angularZone = angularZone;
-        _this.BluetoothGatt = android.bluetooth.BluetoothGatt;
-        _this.BluetoothProfile = android.bluetooth.BluetoothProfile;
-        _this.BluetoothReader = com.acs.bluetooth.BluetoothReader;
-        _this.BluetoothReaderGattCallback = com.acs.bluetooth.BluetoothReaderGattCallback;
-        _this.BluetoothReaderManager = com.acs.bluetooth.BluetoothReaderManager;
-        _this.OnReaderDetectionListener = com.acs.bluetooth.BluetoothReaderManager.OnReaderDetectionListener;
-        _this.OnConnectionStateChangeListener = com.acs.bluetooth.BluetoothReaderGattCallback.OnConnectionStateChangeListener;
-        _this.readerState = _this.BluetoothReader.STATE_DISCONNECTED;
-        _this.bluetoothErrors = new bluetooth_gatt_errors_1.BluetoothGattErrors();
-        _this.gattCallback = null;
-        _this.reader = null;
-        _this.device = null;
-        _this.gatt = null;
-        _this.adapter = null;
-        _this.scanForDevicesCallback = new android.bluetooth.BluetoothAdapter.LeScanCallback({
+        var _this_1 = _super.call(this) || this;
+        _this_1.angularZone = angularZone;
+        _this_1.BluetoothGatt = android.bluetooth.BluetoothGatt;
+        _this_1.BluetoothProfile = android.bluetooth.BluetoothProfile;
+        _this_1.BluetoothReader = com.acs.bluetooth.BluetoothReader;
+        _this_1.BluetoothReaderGattCallback = com.acs.bluetooth.BluetoothReaderGattCallback;
+        _this_1.BluetoothReaderManager = com.acs.bluetooth.BluetoothReaderManager;
+        _this_1.OnReaderDetectionListener = com.acs.bluetooth.BluetoothReaderManager.OnReaderDetectionListener;
+        _this_1.OnConnectionStateChangeListener = com.acs.bluetooth.BluetoothReaderGattCallback.OnConnectionStateChangeListener;
+        _this_1.readerState = _this_1.BluetoothReader.STATE_DISCONNECTED;
+        _this_1.bluetoothErrors = new bluetooth_gatt_errors_1.BluetoothGattErrors();
+        _this_1.gattCallback = null;
+        _this_1.reader = null;
+        _this_1.device = null;
+        _this_1.gatt = null;
+        _this_1.adapter = null;
+        _this_1.scanForDevicesCallback = new android.bluetooth.BluetoothAdapter.LeScanCallback({
             onLeScan: function (device, rssi, data) {
                 try {
-                    var value_1 = _this.scanResults.getValue();
+                    var value_1 = _this_1.scanResults.getValue();
                     var filteredValues = value_1.filter(function (item) {
                         return item.getAddress() === device.getAddress();
                     });
@@ -48,11 +48,11 @@ var ACSBluetooth = (function (_super) {
                         console.log("ASCBluetooth: Scanning discovered new Bluetooth device " + device.getName() + " : " + device.getAddress() + " [" + device.hashCode() + "]");
                         value_1.push(device);
                         console.log("ASCBluetooth: NgZone.isInAngularZone() : " + core_1.NgZone.isInAngularZone());
-                        _this.angularZone.run(function () {
-                            _this.scanResults.next(value_1);
+                        _this_1.angularZone.run(function () {
+                            _this_1.scanResults.next(value_1);
                             console.log("ASCBluetooth: angularZone.isInAngularZone() : " + core_1.NgZone.isInAngularZone());
                         });
-                        console.log("ASCBluetooth: " + _this.scanResults.getValue().length + " devices found");
+                        console.log("ASCBluetooth: " + _this_1.scanResults.getValue().length + " devices found");
                     }
                 }
                 catch (e) {
@@ -60,10 +60,10 @@ var ACSBluetooth = (function (_super) {
                 }
             }
         });
-        _this.createOnConnectionStateChangeListener = function () {
+        _this_1.createOnConnectionStateChangeListener = function () {
             console.log('ASCBluetooth:  createOnConnectionStateChangeListener');
-            var that = _this;
-            return new _this.OnConnectionStateChangeListener({
+            var that = _this_1;
+            return new _this_1.OnConnectionStateChangeListener({
                 onConnectionStateChange: function (gatt, state, newState) {
                     that.readerState = newState;
                     if (state !== that.BluetoothGatt.GATT_SUCCESS) {
@@ -96,12 +96,14 @@ var ACSBluetooth = (function (_super) {
                 }
             });
         };
-        _this.createOnCardStatusChangeListener = function () {
-            var that = _this;
+        _this_1.createOnCardStatusChangeListener = function () {
+            var that = _this_1;
             return new com.acs.bluetooth.BluetoothReader.OnCardStatusChangeListener({
                 onCardStatusChange: function (reader, state) {
                     if (state == that.BluetoothReader.CARD_STATUS_PRESENT) {
                         that.requestUid();
+                    }
+                    else if (state == that.BluetoothReader.CARD_STATUS_ABSENT) {
                     }
                     else {
                         that.angularZone.run(function () {
@@ -111,8 +113,8 @@ var ACSBluetooth = (function (_super) {
                 }
             });
         };
-        _this.createOnEnableNotificationCompleteListener = function () {
-            var that = _this;
+        _this_1.createOnEnableNotificationCompleteListener = function () {
+            var that = _this_1;
             return new com.acs.bluetooth.BluetoothReader.OnEnableNotificationCompleteListener({
                 onEnableNotificationComplete: function (reader, errorCode) {
                     if (errorCode != that.BluetoothReader.ERROR_SUCCESS) {
@@ -124,8 +126,8 @@ var ACSBluetooth = (function (_super) {
                 }
             });
         };
-        _this.createOnAuthenticationCompleteListener = function () {
-            var that = _this;
+        _this_1.createOnAuthenticationCompleteListener = function () {
+            var that = _this_1;
             return new com.acs.bluetooth.BluetoothReader.OnAuthenticationCompleteListener({
                 onAuthenticationComplete: function (reader, errorCode) {
                     if (errorCode == that.BluetoothReader.ERROR_SUCCESS) {
@@ -141,8 +143,8 @@ var ACSBluetooth = (function (_super) {
                 }
             });
         };
-        _this.createOnResponseApduAvailableListener = function () {
-            var that = _this;
+        _this_1.createOnResponseApduAvailableListener = function () {
+            var that = _this_1;
             return new com.acs.bluetooth.BluetoothReader.OnResponseApduAvailableListener({
                 onResponseApduAvailable: function (reader, byte, errorCode) {
                     try {
@@ -157,8 +159,8 @@ var ACSBluetooth = (function (_super) {
                 }
             });
         };
-        _this.createOnEscapeResponseAvailableListener = function () {
-            var that = _this;
+        _this_1.createOnEscapeResponseAvailableListener = function () {
+            var that = _this_1;
             return new com.acs.bluetooth.BluetoothReader.OnEscapeResponseAvailableListener({
                 onEscapeResponseAvailable: function (reader, response, errorCode) {
                     console.log("Command Response %s %s", response, that.getResponseString(response, errorCode));
@@ -166,18 +168,18 @@ var ACSBluetooth = (function (_super) {
             });
         };
         console.log("ASCBluetooth: init");
-        _this.scanResults = new rxjs_1.BehaviorSubject([]);
-        _this.scanning = new rxjs_1.BehaviorSubject(false);
-        _this.readerConnected = new rxjs_1.BehaviorSubject(false);
-        _this.cardUid = new rxjs_1.BehaviorSubject('');
+        _this_1.scanResults = new rxjs_1.BehaviorSubject([]);
+        _this_1.scanning = new rxjs_1.BehaviorSubject(false);
+        _this_1.readerConnected = new rxjs_1.BehaviorSubject(false);
+        _this_1.cardUid = new rxjs_1.BehaviorSubject('');
         var manager = utils.ad.getApplicationContext().getSystemService(android.content.Context.BLUETOOTH_SERVICE);
-        _this.adapter = manager.getAdapter();
-        _this.readerManager = new _this.BluetoothReaderManager();
-        _this.readerManager.setOnReaderDetectionListener(new _this.OnReaderDetectionListener({
-            onReaderDetection: _this.onReaderDetection.bind(_this)
+        _this_1.adapter = manager.getAdapter();
+        _this_1.readerManager = new _this_1.BluetoothReaderManager();
+        _this_1.readerManager.setOnReaderDetectionListener(new _this_1.OnReaderDetectionListener({
+            onReaderDetection: _this_1.onReaderDetection.bind(_this_1)
         }));
         console.log("ASCBluetooth: init done");
-        return _this;
+        return _this_1;
     }
     ACSBluetooth.prototype.startScanningForDevices = function () {
         this.scanning.next(true);
@@ -278,10 +280,10 @@ var ACSBluetooth = (function (_super) {
         }
     };
     ACSBluetooth.prototype.disconnect = function () {
-        var _this = this;
+        var _this_1 = this;
         console.log('disconnected');
         this.angularZone.run(function () {
-            _this.readerConnected.next(false);
+            _this_1.readerConnected.next(false);
         });
         if (this.gatt !== null) {
             this.gatt.disconnect();
@@ -298,14 +300,15 @@ var ACSBluetooth = (function (_super) {
         }
     };
     ACSBluetooth.prototype.beep = function () {
+        var _this = this;
         if (this.reader) {
-            this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['COMMAND_BEEP']));
+            _this.reader.transmitEscapeCommand(_this.hex2Bytes(COMMANDS['COMMAND_BEEP']));
         }
     };
     ACSBluetooth.prototype.startPolling = function () {
         if (this.reader) {
             this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['AUTO_POLLING_START']));
-            this.reader.transmitEscapeCommand(this.hex2Bytes('COMMAND_ENABLE_BUZZER'));
+            this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['COMMAND_ENABLE_BUZZER']));
         }
     };
     ACSBluetooth.prototype.stopPolling = function () {
@@ -319,10 +322,10 @@ var ACSBluetooth = (function (_super) {
         }
     };
     ACSBluetooth.prototype.requestUid = function () {
-        var _this = this;
+        var _this_1 = this;
         if (this.reader) {
             setTimeout(function () {
-                if (_this.reader.transmitApdu(_this.hex2Bytes(COMMANDS['APDU_COMMAND_UID']))) {
+                if (_this_1.reader.transmitApdu(_this_1.hex2Bytes(COMMANDS['APDU_COMMAND_UID']))) {
                 }
                 else {
                     console.log('request failed');
