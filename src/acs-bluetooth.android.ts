@@ -50,6 +50,11 @@ const COMMANDS = {
 };
 const MASTER_KEY = '41 43 52 31 32 35 35 55 2D 4A 31 20 41 75 74 68';
 
+const CARD_READ = {
+    ABSENT: '1111',
+    FAULTY: '2222'
+};
+
 @Injectable()
 export class ACSBluetooth extends Common {
 
@@ -336,18 +341,18 @@ export class ACSBluetooth extends Common {
                     }
 
                     else if(state == that.BluetoothReader.CARD_STATUS_ABSENT) {
-                        // REVERT IF ANY ISSUE FOUND
-                        // that.angularZone.run(
-                        //     () => {
-                        //         that.cardUid.next('');
-                        //     }
-                        // );
+                        that.angularZone.run(
+                            () => {
+                                that.cardUid.next(CARD_READ.ABSENT);
+                            }
+                        );
                     }
 
                     else {
                         that.angularZone.run(
                             () => {
-                                that.cardUid.next('');
+                                that.cardUid.next(CARD_READ.FAULTY);
+
                             }
                         );
                     }
