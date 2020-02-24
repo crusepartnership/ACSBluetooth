@@ -18,6 +18,10 @@ var COMMANDS = {
     COMMAND_ENABLE_BUZZER: 'E0 00 00 21 01 7F'
 };
 var MASTER_KEY = '41 43 52 31 32 35 35 55 2D 4A 31 20 41 75 74 68';
+var CARD_READ = {
+    ABSENT: '1111',
+    FAULTY: '2222'
+};
 var ACSBluetooth = (function (_super) {
     __extends(ACSBluetooth, _super);
     function ACSBluetooth(angularZone) {
@@ -104,10 +108,13 @@ var ACSBluetooth = (function (_super) {
                         that.requestUid();
                     }
                     else if (state == that.BluetoothReader.CARD_STATUS_ABSENT) {
+                        that.angularZone.run(function () {
+                            that.cardUid.next(CARD_READ.ABSENT);
+                        });
                     }
                     else {
                         that.angularZone.run(function () {
-                            that.cardUid.next('');
+                            that.cardUid.next(CARD_READ.FAULTY);
                         });
                     }
                 }
