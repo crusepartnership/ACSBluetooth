@@ -46,7 +46,6 @@ const COMMANDS = {
     APDU_COMMAND_ATS: 'FF CA 01 00 00',
     SLEEP_COMMAND_DISABLE: 'E0 00 00 48 04',
     COMMAND_LONG_BEEP: 'E0 00 00 28 01 50',
-    COMMAND_SHORT_BEEP: 'E0 00 00 28 01 10',
     COMMAND_DISABLE_BUZZER: 'E0 00 00 21 01 30'
 };
 const MASTER_KEY = '41 43 52 31 32 35 35 55 2D 4A 31 20 41 75 74 68';
@@ -453,7 +452,9 @@ export class ACSBluetooth extends Common {
     public beep() {
         let _this = this;
         if(this.reader) {
-            _this.reader.transmitEscapeCommand(_this.hex2Bytes(COMMANDS['COMMAND_LONG_BEEP']));
+            setTimeout(() => {
+                _this.reader.transmitEscapeCommand(_this.hex2Bytes(COMMANDS['COMMAND_LONG_BEEP']));
+            }, 250);
         }
 
     }
@@ -463,7 +464,6 @@ export class ACSBluetooth extends Common {
      */
     public startPolling() {
         if(this.reader) {
-            this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['COMMAND_DISABLE_BUZZER']));
             this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['AUTO_POLLING_START']));
         }
 
@@ -494,7 +494,6 @@ export class ACSBluetooth extends Common {
         if(this.reader) {
 
             setTimeout(()=>{
-                this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['COMMAND_SHORT_BEEP']))
                 if(this.reader.transmitApdu(this.hex2Bytes(COMMANDS['APDU_COMMAND_UID']))){
                 }else{
                     console.log('request failed');
