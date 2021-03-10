@@ -15,7 +15,9 @@ var COMMANDS = {
     APDU_COMMAND_ATS: 'FF CA 01 00 00',
     SLEEP_COMMAND_DISABLE: 'E0 00 00 48 04',
     COMMAND_LONG_BEEP: 'E0 00 00 28 01 50',
-    COMMAND_DISABLE_BUZZER: 'E0 00 00 21 01 30'
+    COMMAND_DISABLE_BUZZER: 'E0 00 00 21 01 30',
+    LONGER_TRANSMISSION: 'E0 00 00 49 03',
+    NO_SLEEP: 'E0 00 00 48 04'
 };
 var MASTER_KEY = '41 43 52 31 32 35 35 55 2D 4A 31 20 41 75 74 68';
 var CARD_READ = {
@@ -317,6 +319,8 @@ var ACSBluetooth = (function (_super) {
     ACSBluetooth.prototype.startPolling = function () {
         if (this.reader) {
             this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['AUTO_POLLING_START']));
+            this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['LONGER_TRANSMISSION']));
+            this.reader.transmitEscapeCommand(this.hex2Bytes(COMMANDS['NO_SLEEP']));
         }
     };
     ACSBluetooth.prototype.stopPolling = function () {
