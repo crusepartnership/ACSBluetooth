@@ -556,6 +556,6 @@ export class ACSBluetooth extends Common {
             hexStr += hex.slice(-2);
         }
 
-        return hexStr.substr(0,8).toUpperCase();
+        return hexStr.substr(0, hexStr.length - 4).toUpperCase();
     }
 }
