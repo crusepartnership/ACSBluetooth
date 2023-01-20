@@ -376,7 +376,8 @@ var ACSBluetooth = (function (_super) {
             hex = (hex.length === 1) ? '0' + hex : hex;
             hexStr += hex.slice(-2);
         }
-        return hexStr.substr(0, 8).toUpperCase();
+        return hexStr.substr(0, hexStr.length - 4).toUpperCase();
+
     };
     ACSBluetooth = __decorate([
         core_2.Injectable(),
